@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+:root {
+    --primary-color: #FFCB05;
+    --secondary-color: #3565AE;
+    --black: #080917;
+    --white: #FCFCFC;
+    --gray-100: #EAEAEA;
+    --gray-200: #E4E4E4;
+    --gray-300: #DEE2E6;
+    --gray-400: #CACACA;
+    --gray-500: #707070;
+    --gray-600: #3D3D3D;
+    --gray-700: #303030;
+
+    --title-color: var(--black);
+    --subheading-color: var(--primary-color);
+    --paragraph-color: var(--black);
+    --link-color: var(--black);
+    --link-active-color: var(--primary-color);
+    --icon-color: var(--secondary-color)
+}

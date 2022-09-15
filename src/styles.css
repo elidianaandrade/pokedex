@@ -1,0 +1,23 @@
+@import url('_base.css');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Heebo', Arial, sans-serif;
+}
+
+main {
+    padding: 2rem;
+}
+
+main h1 {
+    margin: 0;
+}

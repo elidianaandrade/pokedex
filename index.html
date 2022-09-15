@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokédex, detailed stats of each Pokemon">
+    <meta name="keywords" content="Pokédex, Pokémon">
+    <meta name="author" content="Elidiana Andrade">
+    <meta name="theme-color" content="#0A0B1C">
+    <link rel="icon" type="image/x-icon" href="src/favicon.ico">
+    <link rel="apple-touch-icon" href="./public/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/pokedex.css">
+</head>
+<body>
+    <main>
+        <h1>Pokédex</h1>
+
+        <ol class="pokemons-list">
+            <li class="pokemon">
+                <img class="pokemon__img" src="src/assets/images/pokemons/bulbasaur.png" alt="Pokémon">
+
+                <div class="pokemon__details">
+                    <span class="pokemon__number">#001</span>
+                    <span class="pokemon__name">Bulbasaur</span>
+                    <ol class="types-list">
+                        <li class="type">Grass</li>
+                        <li class="type">Poison</li>
+                    </ol>
+                </div>
+            </li>
+        </ol>
+    </main>
+    <noscript>
+        <h3>You need to enable JavaScript to run this app.</h3>
+    </noscript>
+    <script src="src/main.js"></script>
+</body>
+</html>

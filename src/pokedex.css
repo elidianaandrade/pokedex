@@ -1,0 +1,86 @@
+@import url('_base.css');
+
+
+/* POKÉMON LIST STYLE */
+.pokemons-list {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--white);
+    margin: 0;
+}
+
+.pokemon__img {
+    max-width: 100%;
+    height: 5rem;
+    align-self: center;
+    margin-bottom: -0.55rem;
+    z-index: 1;
+}
+
+.pokemon__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--secondary-color);
+    border-radius: 0.5rem;
+    list-style: none;
+    padding: 1.55rem 1.125rem 1.125rem;
+    margin: 0;
+}
+
+.pokemon__number {
+    color: var(--white);
+    text-align: right;
+    margin: 0;
+}
+
+.pokemon__name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    padding: 0;
+    margin: 0.25rem 0;
+}
+
+.types-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;   
+}
+
+.type {
+    background-color: var(--primary-color);
+    border-radius: 25rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 768px) {
+    .pokemons-list {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }  
+}
+
+@media screen and (min-width: 1024px) {
+    .pokemons-list {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+    }  
+}
+/* POKÉMON LIST STYLE END */
