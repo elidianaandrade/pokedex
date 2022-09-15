@@ -4,7 +4,7 @@
 /* POKÉMON LIST STYLE */
 .pokemons-list {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(1, 100%);
     gap: 0.25rem;
     list-style: none;
     padding: 0;
@@ -70,6 +70,14 @@
 }
 
 /* Breakpoints */
+@media screen and (min-width: 576px) {
+    .pokemons-list {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }  
+}
+
+
 @media screen and (min-width: 768px) {
     .pokemons-list {
         display: grid;
@@ -77,7 +85,7 @@
     }  
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
     .pokemons-list {
         display: grid;
         grid-template-columns: repeat(4, 25%);
