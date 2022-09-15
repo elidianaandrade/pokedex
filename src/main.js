@@ -1,8 +1,3 @@
-
-const offset = 0;
-const limit = 9;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
-
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon">
