@@ -18,7 +18,7 @@ Pokédex desenvolvida como Desafio de Projeto na Formação JavaScript Developer
 ![CSS3](https://img.shields.io/badge/CSS3-000?style=for-the-badge&logo=css3&logoColor=7520FF)
 
 ## 🔍 Referências
-- [Repositório do Instrutor Renan J Paulla](https://github.com/digitalinnovationone/js-developer-pokedex).
+- [Repositório do Instrutor Renan J Paula](https://github.com/digitalinnovationone/js-developer-pokedex).
 - [Digital Innovation One](https://www.dio.me/).
 
 <div align="right">
