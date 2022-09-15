@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: space-between;
     background: var(--white);
-    margin: 0;
+    margin: 0.5rem;
 }
 
 .pokemon__img {
