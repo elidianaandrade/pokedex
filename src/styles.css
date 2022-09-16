@@ -18,10 +18,40 @@ body {
     background-color: var(--secondary-color);
 }
 
-main {
-    padding: 2rem;
+/* SCROLLBAR STYLE */
+::-webkit-scrollbar {
+    width: 0.4rem;
 }
 
-main h1 {
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 50rem;
+}
+/* SCROLLBAR STYLE END */
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    box-shadow: 0 0 0.4rem var(--gray-200);
+    padding: 0.5rem 1rem;
     margin: 0;
+}
+
+.navbar__brand {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.navbar__brand img {
+    height: 4rem;
+    padding: 0.5rem;
+    pointer-events: none;
 }

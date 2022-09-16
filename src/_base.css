@@ -11,25 +11,26 @@
     --gray-400: #8B8B8B;
     --gray-500: #2D3037;
     --gray-600: #212327;
+    --yellow: #e6a900;
 
-    --normal: #a6a877;
-    --grass: #77c850;
-    --fire: #ee7f30;
-    --water: #678fee;
-    --electric: #f7cf2e;
-    --ice: #98d5d7;
+    --normal: linear-gradient(to right, #636363, #a2ab58);
+    --grass: linear-gradient(to right, #11998e, #38ef7d);
+    --fire: linear-gradient(to right, #fe8c00, #f83600);
+    --water: linear-gradient(to left, #00d2ff, #3a7bd5);
+    --electric: linear-gradient(to right, #e6a900, #f9d423);
+    --ice: linear-gradient(to right, #9cecfb, #65c7f7, #418aff);
     --ground: #dfbf69;
     --flying: #a98ff0;
-    --poison: #a040a0;
-    --fighting: #bf3029;
-    --psychic: #f65687;
+    --poison: linear-gradient(to right, #6a3093, #a044ff);
+    --fighting: linear-gradient(to right, #e52d27, #b31217); 
+    --psychic: linear-gradient(to right, #7f00ff, #e100ff);
     --dark: #725847;
     --rock: #b8a137;
-    --bug: #a8b720;
+    --bug: linear-gradient(to right, #3ca55c, #b5ac49);
     --ghost: #6e5896;
     --steel: #b9b7cf;
     --dragon: #6f38f6;
-    --fairy: #f9aec7;
+    --fairy: linear-gradient(to right, #d9a7c7, #fffcdc);
 
     --title-color: var(--black);
     --subheading-color: var(--primary-color);
