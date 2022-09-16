@@ -37,7 +37,7 @@
 }
 
 .electric {
-    background-color: var(--eletric);
+    background-color: var(--electric);
 }
 
 .ice {
@@ -136,11 +136,13 @@
     margin: 0;   
 }
 
-.type {
+.types-list .type {
     font-size: 0.85rem;
+    text-align: center;
     text-transform: capitalize;
     border-radius: 25rem;
     padding: 0.4rem 0.8rem;
+    filter: brightness(1.1);
 }
 
 /* Breakpoints */
@@ -166,3 +168,28 @@
     }  
 }
 /* POKÉMON LIST STYLE END */
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+}
+
+.pagination button {
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border: 0.125rem solid var(--secondary-color);
+    border-radius: 50rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+}
+
+.pagination button:hover {
+    box-shadow: inset 0 0 0.4rem var(--gray-600);
+}

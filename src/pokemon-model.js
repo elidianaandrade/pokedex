@@ -1,5 +1,5 @@
 class Pokemon {
-    order;
+    id;
     name;
     types = [];
     type;
