@@ -15,7 +15,7 @@ body {
 }
 
 ::selection {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 /* SCROLLBAR STYLE */
@@ -28,12 +28,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--gray-300);
+    background: var(--gray-100);
     border-radius: 50rem;
 }
 /* SCROLLBAR STYLE END */
 
 header {
+    position: fixed;
+    top:0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -41,12 +43,15 @@ header {
     width: 100%;
     height: 5rem;
     box-shadow: 0 0 0.4rem var(--gray-200);
+    background-color: var(--white);
     padding: 0.5rem 1rem;
     margin: 0;
+    user-select: none;
+    z-index: 3;
 }
 
 .navbar__brand {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     cursor: pointer;
 }
 
