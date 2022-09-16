@@ -1,15 +1,14 @@
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon">
-            <img class="pokemon__img" src="" 
+        <li class="pokemon ${pokemon.type}">
+            <img class="pokemon__img" src="${ pokemon.img }" 
             alt="Pokémon ${ pokemon.name }">
 
             <div class="pokemon__details">
-                <span class="pokemon__number">#001</span>
+                <span class="pokemon__number"> #${ pokemon.order } </span>
                 <span class="pokemon__name">${ pokemon.name }</span>
                 <ol class="types-list">
-                    <li class="type">Grass</li>
-                    <li class="type">Poison</li>
+                    ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
                 </ol>
             </div>
         </li> 
