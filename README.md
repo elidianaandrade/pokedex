@@ -1,6 +1,6 @@
 <div id="top" align="center">
   <a href="https://elidianaandrade.github.io/pokedex">
-    <img alt="Screen Pokédex" src="">
+    <img alt="Screen Pokédex" src="https://raw.githubusercontent.com/elidianaandrade/pokedex/0743695aabb7bf0bfa34eea1723fb66e1387069b/src/assets/images/screen.jpg">
   </a>
 </div>
 
