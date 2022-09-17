@@ -22,15 +22,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
 .pokemon__cover::before {
     position: absolute;
     content: '';
-    min-width: 10rem;
-    min-height: 10rem;
-    background: url('./../src/assets/images/pokeball-white.png') no-repeat center;
+    min-width: 9.5rem;
+    min-height: 9.5rem;
+    background: url('./../../assets/images/pokeball-white.png') no-repeat center;
     background-size: cover;
     transform: rotate(20deg);
     opacity: 20%;
@@ -42,28 +41,59 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 10rem;
-    min-height: 10rem;
+    min-width: 9.5rem;
+    min-height: 9.5rem;
     border-radius: 50rem;
     user-select: none;
     z-index: 1;
-    box-shadow: inset 0 0 0.4rem var(--shadow-color);
+    box-shadow: inset 0.1rem 0.1rem 0.4rem var(--shadow-color);
     margin-bottom: -5rem;
+}
 
+.button-favorite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: var(--secondary-background-color);
+    box-shadow: 0 0 0.4rem var(--shadow-color);
+    border: none;
+    border-radius: 50rem;
+    cursor: pointer;
+    z-index: 3;
+
+    font-size: 1.25rem;
+    color: var(--white);
+    padding: 1.25rem 1rem 1rem;
+}
+
+.bi-heart-fill {
+    -webkit-text-stroke-width: 0.085rem !important;
+    -webkit-text-stroke-color: var(--white) !important;
+    color: transparent !important;
+}
+
+.bi-heart-fill:hover, .bi-heart-fill.active {
+    -webkit-text-stroke-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .pokemon__img {
     width: 9rem;
     height: 9rem;
-    max-height: 100%;
-    margin: 0.5rem;
+    padding: 0.5rem;
     cursor: pointer;
     z-index: 2;
     transition: 0.4s;
 }
 
 .pokemon__img:hover {
-    transform: scale(1.125);
+    transform: scale(1.25);
     transition: 0.4s;
 }
 
@@ -79,7 +109,7 @@
     background: var(--secondary-background-color);
     box-shadow: 0 0 0.4rem var(--shadow-color);
     border-radius: 0.8rem;
-    padding: 5.5rem 1.5rem 1.5rem;
+    padding: 6.5rem 1.5rem 1.5rem;
     margin: 0;
 }
 
@@ -239,18 +269,20 @@
 }
 
 /* Breakpoints */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
     .pokemons-list {
         display: grid;
         grid-template-columns: repeat(3, 33%);
+        gap: 1.5rem;
     }  
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     .pokemons-list {
         display: grid;
         grid-template-columns: repeat(4, 25%);
+        gap: 1.5rem;
     }  
 }
 /* POKÉMON LIST STYLE END */

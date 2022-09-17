@@ -15,8 +15,8 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="src/styles.css">
-    <link rel="stylesheet" href="src/pokedex.css">
-    <link rel="stylesheet" href="src/sidebar.css">
+    <link rel="stylesheet" href="src/components/sidebar/sidebar.css">
+    <link rel="stylesheet" href="src/components/pokedex/pokedex.css">
 </head>
 <body>
     <header>
@@ -36,7 +36,7 @@
         </div>
         <div class="sidebar__menu">
             <ul class="menu">
-                <li class="menu__item">
+                <li class="menu__item active">
                     <a href="#home" title="Home" class="menu__link">
                         <i class="menu__icon bi bi-house-door"></i>
                         <span class="menu__text">Home</span>
@@ -44,8 +44,14 @@
                 </li>
                 <li class="menu__item">
                     <a href="#pokedex" title="Pokédex" class="menu__link">
-                        <img src="src/assets/images/pokeball-white.png" alt="">
+                        <i class="menu__icon bi bi-record-circle"></i>
                         <span class="menu__text">Pokédex</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#favorites" title="Favorites" class="menu__link">
+                        <i class="menu__icon bi bi-heart"></i>
+                        <span class="menu__text">Favorites</span>
                     </a>
                 </li>
                 <li class="menu__item">
@@ -57,17 +63,25 @@
             </ul>
         </div>
         <div class="sidebar__footer">
+            <span _ngcontent-chq-c22="" class="text"> Pokédex. Made with 
+                <i _ngcontent-chq-c22="" class="bi bi-suit-heart"></i> 
+                by 
+                <a _ngcontent-chq-c22="" href="https://github.com/elidianaandrade" target="_blank">EA</a>. 
+            </span>
         </div>
     </aside>
-    <main>
-        <h1>Hello, Eli</h1>
+    <main id="home">
+        <span>Hello, Guest</span>
+        <h1 class="title">Which pokemon will you choose today?</h1>
         <div>
             
         </div>
     </main>
     <section id="pokedex">
         <h2>Pokédex</h2>
-        <ol id="pokemonsList" class="pokemons-list"></ol>
+        <ol id="pokemonsList" class="pokemons-list">
+            
+        </ol>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 <img src="src/assets/images/pokeball.png" alt="Pokeball">
@@ -85,8 +99,14 @@
             </li>
             <li class="menu__item">
                 <a href="#pokedex" title="Pokédex" class="menu__link">
-                    <img class="menu__icon" src="src/assets/images/pokeball-white.png" alt="">
+                    <i class="menu__icon bi bi-record-circle"></i>
                     <span class="menu__text">Pokédex</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#favorites" title="Favorites" class="menu__link">
+                    <i class="menu__icon bi bi-heart"></i>
+                    <span class="menu__text">Favorites</span>
                 </a>
             </li>
             <li class="menu__item">
@@ -102,6 +122,7 @@
     </noscript>
     <script src="src/pokemon-model.js"></script>
     <script src="src/pokemon-api.js"></script>
+    <script src="src/components/pokedex/pokedex.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     position: fixed;
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 15rem;
     height: 94%;
@@ -13,19 +13,34 @@
     z-index: 3;
     background: var(--secondary-background-color);
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
     margin: 1.25rem;
 }
 
+.sidebar__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
 .sidebar__brand {
-    margin: 1rem 0.5rem 0.5rem;
     cursor: pointer;
+    width: 100%;
 }
 
 .sidebar__brand img {
+    align-self: center;
     height: 4rem;
     padding: 0.5rem;
     pointer-events: none;
+}
+
+.sidebar__menu {
+    align-self: flex-start;
+    height: 100%;
+    padding: 1rem 1.5rem;
 }
 
 .sidebar .menu {
@@ -50,32 +65,19 @@
     color: var(--white);
 }
 
-.sidebar .menu__link i {
-    font-size: 1.8rem;
-    color: var(--white);
-    height: 1.8rem;
-}
-
-.sidebar .menu__link i:hover {
-    color: var(--black);
-}
-
-.sidebar .menu__link img {
-    width: 1.8rem;
-    height: 1.8rem;
-}
-
-.sidebar .menu__link img:hover {
-    filter: invert(100%);
-}
-
 .sidebar .sidebar .menu__link .menu__text{
     color: var(--white);
     font-size: 0.8rem;
 }
 
 .sidebar__footer {
-    height: 4rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    color: var(--gray-300);
+}
+
+.sidebar__footer a {
+    color: var(--gray-300);
 }
 
 @media screen and (max-width: 576px) {

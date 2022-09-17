@@ -56,6 +56,11 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--primary-color) !important;
 }
 
 /* SCROLLBAR STYLE */
@@ -79,17 +84,27 @@ header {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    margin: 2rem 3rem 1.25rem 2rem;
 } 
 
 .header__brand img {
-    height: 4rem;
+    height: 4.5rem;
     padding: 0.5rem;
     pointer-events: none;
 }
 
 main {
-    margin: 2.5rem 3rem 1.25rem 2.5rem;
+    padding: 4.5rem 3rem 1.25rem 2.5rem;
+}
+
+main span {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+main .title {
+    font-size: 2rem;
+    color: var(--white);
 }
 
 main div {
@@ -98,6 +113,36 @@ main div {
     padding: 2rem;
 }
 
+/* MENU STYLE */
+.menu__icon {
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.menu__item:hover .menu__text, 
+.menu__item.active .menu__text,
+.menu__item:hover .menu__icon,
+.menu__item.active .menu__icon {
+    color: var(--primary-color) !important;
+}
+
+.bi-record-circle::after{
+    position: absolute;
+    content: '';
+    width: 1.5rem;
+    height: 0.15rem;
+    margin: 0.66rem 0 0 -1.5rem;
+    background: var(--white);
+}
+
+.menu__item:hover .bi-record-circle::after, 
+.menu__item.active .bi-record-circle::after {
+    background: var(--primary-color) !important;
+}
+/* MENU STYLE END */
 
 .footerbar {
     position: fixed;
@@ -130,29 +175,8 @@ main div {
     align-items: center;
     gap: 0.25rem;
     padding: 0.125rem 0.5rem;
-    width: 33vw;
+    width: 25vw;
     height: 100%;
-}
-
-.footerbar .menu__link i {
-    font-size: 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    color: var(--white);
-    text-align: center;
-}
-
-.footerbar .menu__link i:hover {
-    color: var(--black);
-}
-
-.footerbar .menu__link img {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.footerbar .menu__link img:hover {
-    filter: invert(100%);
 }
 
 .footerbar .menu__link .menu__icon.active {
@@ -165,10 +189,21 @@ main div {
 }
 
 /* Breakpoints */
+@media screen and (max-width: 576px) {
+    main {
+        padding: 2rem;
+    }
+}
+
 @media screen and (min-width: 576px) {
     body {
         margin-left: 18rem;
     } 
+
+    header {
+        position: absolute;
+    }
+
     header img, .footerbar {
         display: none;
     }  
