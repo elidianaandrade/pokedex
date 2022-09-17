@@ -1,11 +1,12 @@
 @import url('_base.css');
 
+
 #pokedex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 6.5rem 1rem 2rem;
+    margin: 1.5rem 1rem;
 }
 
 /* POKÉMON LIST STYLE */
@@ -20,14 +21,11 @@
 
 .pokemon {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     min-height: 10rem;
-    border-radius: 50rem 5rem 5rem 50rem;
-    background: var(--gray-100);
-    box-shadow: 0 0 0.4rem var(--gray-100);
 }
 
 .pokemon__cover::before {
@@ -53,6 +51,7 @@
     user-select: none;
     z-index: 1;
     box-shadow: 0 0 0.4rem var(--gray-300);
+    margin-bottom: -5rem;
 
 }
 
@@ -75,12 +74,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
     width: 100%;
     height: 100%;
     list-style: none;
-    padding: 1.5rem;
+    background: var(--gray-100);
+    box-shadow: 0 0 0.4rem var(--gray-100);
+    border-radius: 0.8rem;
+    padding: 5.5rem 1.5rem 1.5rem;
     margin: 0;
 }
 
@@ -224,6 +226,9 @@
 
 /* Breakpoints */
 @media screen and (min-width: 576px) {
+    #pokedex {
+        margin-left: 16rem;
+    }
     .pokemons-list {
         display: grid;
         grid-template-columns: repeat(2, 50%);

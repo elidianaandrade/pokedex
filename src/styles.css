@@ -18,6 +18,10 @@ body {
     background-color: var(--primary-color);
 }
 
+a {
+    text-decoration: none;
+}
+
 /* SCROLLBAR STYLE */
 ::-webkit-scrollbar {
     width: 0.4rem;
@@ -34,29 +38,74 @@ body {
 /* SCROLLBAR STYLE END */
 
 header {
-    position: fixed;
-    top:0;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 5rem;
-    box-shadow: 0 0 0.4rem var(--gray-200);
-    background-color: var(--white);
-    padding: 0.5rem 1rem;
-    margin: 0;
-    user-select: none;
-    z-index: 3;
-}
+    padding: 1rem;
+} 
 
-.navbar__brand {
-    margin: 0 0.5rem;
-    cursor: pointer;
-}
-
-.navbar__brand img {
+.header__brand img {
     height: 4rem;
     padding: 0.5rem;
     pointer-events: none;
+}
+
+.footerbar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    background: var(--secondary-color);
+    z-index: 3;
+}
+
+.footerbar .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerbar .menu__item .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 1rem;
+    color: var(--white);
+}
+
+.footerbar .menu__link i {
+    font-size: 1.5rem;
+    height: 1.5rem;
+    color: var(--white);
+}
+
+.footerbar .menu__link i:hover {
+    color: var(--black);
+}
+
+.footerbar .menu__link img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footerbar .footerbar .menu__link .menu__text{
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 576px) {
+    header, .footerbar {
+        display: none;
+    }  
 }

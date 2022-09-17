@@ -1,0 +1,83 @@
+@import url('_base.css');
+
+
+/* SIDEBAR STYLE */
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    top: 0;
+    padding: 0.5rem;
+    margin: 0;
+    user-select: none;
+    z-index: 3;
+    background: var(--secondary-color);
+}
+
+.sidebar__brand {
+    margin: 1rem 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.sidebar__brand img {
+    height: 4rem;
+    padding: 0.5rem;
+    pointer-events: none;
+}
+
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.sidebar .menu__item .menu__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.25rem 0;
+    color: var(--white);
+}
+
+.sidebar .menu__link i {
+    font-size: 1.8rem;
+    color: var(--white);
+    height: 1.8rem;
+}
+
+.sidebar .menu__link i:hover {
+    color: var(--black);
+}
+
+.sidebar .menu__link img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.sidebar .sidebar .menu__link .menu__text{
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+.sidebar__footer {
+    height: 4rem;
+}
+
+@media screen and (max-width: 576px) {
+    .sidebar {
+        display: none;
+    }  
+}
+/* SIDEBAR STYLE END */
