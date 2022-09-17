@@ -10,16 +10,22 @@
 Pokédex desenvolvida como Desafio de Projeto na Formação JavaScript Developer da [Digital Innovation One](https://www.dio.me/).
 
 [![Preview](https://img.shields.io/badge/Preview-000?style=for-the-badge&logo=github&logoColor=7520FF)](https://elidianaandrade.github.io/pokedex/)
-![Projeto em desenvolvimento](https://img.shields.io/badge/Projeto%20em%20desenvolvimento-7520FF?style=for-the-badge)
 
 ## 💻 Tecnologias
 ![JavaScript](https://img.shields.io/badge/JavaScript-000?style=for-the-badge&logo=javascript&logoColor=7520FF)
 ![HTML5](https://img.shields.io/badge/HTML5-000?style=for-the-badge&logo=html5&logoColor=7520FF)
 ![CSS3](https://img.shields.io/badge/CSS3-000?style=for-the-badge&logo=css3&logoColor=7520FF)
 
+## ⚙ Funcionalidades
+- [x] Pesquisa de Pokémons;
+- [x] Listagem de Pokémons;
+- [ ] Wishlist;
+- [ ] Profile.
+
 ## 🔍 Referências
 - [Repositório do Instrutor Renan J Paula](https://github.com/digitalinnovationone/js-developer-pokedex).
 - [Digital Innovation One](https://www.dio.me/).
+- [Manual do Dev](https://youtu.be/SjtdH3dWLa8).
 
 <div align="right">
   <a href="#top">

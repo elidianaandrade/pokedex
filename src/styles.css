@@ -76,6 +76,12 @@ a:hover {
     background: var(--secondary-background-color);
     border-radius: 50rem;
 }
+
+button {
+    background: transparent;
+    border: none;
+}
+
 /* SCROLLBAR STYLE END */
 
 header {
@@ -96,7 +102,7 @@ main {
     padding: 4.5rem 3rem 0 2.5rem;
 }
 
-main span {
+main .subheading {
     font-size: 1rem;
     color: var(--primary-color);
     text-transform: capitalize;
@@ -116,6 +122,20 @@ main .title {
     padding: 1rem;
 }
 
+
+.choose-pokemon__content1::before {
+    position: absolute;
+    content: '';
+    width: 15rem;
+    height: 9rem;
+    margin: 9rem 0 0 -1.5rem;
+    background: url('assets/images/pokeball-white.png') no-repeat top center;
+    background-size: cover;
+    opacity: 2%;
+    object-fit: cover;
+}
+
+
 .choose-pokemon__content1 {
     display: flex;
     flex-direction: column;
@@ -127,6 +147,7 @@ main .title {
 }
 
 .choose-pokemon__form {
+    width: 100%;
     margin: 0 0 0.5rem;
 }
 
@@ -135,7 +156,8 @@ main .title {
     border-radius: 50rem;
     background: var(--primary-background-color);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
+    width: 100%;
 }
 
 .choose-pokemon__details {
@@ -149,6 +171,7 @@ main .title {
 .choose-pokemon__name {
     font-size: 1.45rem;
     color: var(--white);
+    text-transform: capitalize;
     margin-right: 0.5rem;
 }
 
@@ -158,9 +181,15 @@ main .title {
     text-transform: lowercase;
 }
 
-.choose-pokemon__skills {
-    height: 10rem;
+.choose-pokemon__subtitle {
+    color: var(--white);
 }
+
+.choose-pokemon__subtitle span {
+    color: var(--primary-color); 
+    text-transform: capitalize;
+}
+
 
 .choose-pokemon__content2 {
     display: flex;

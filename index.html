@@ -63,15 +63,14 @@
             </ul>
         </div>
         <div class="sidebar__footer">
-            <span _ngcontent-chq-c22="" class="text"> Pokédex. Made with 
-                <i _ngcontent-chq-c22="" class="bi bi-suit-heart"></i> 
-                by 
-                <a _ngcontent-chq-c22="" href="https://github.com/elidianaandrade" target="_blank">EA</a>. 
+            <span class="text"> Pokédex. Made with 
+                <i class="bi bi-suit-heart"></i> by 
+                <a href="https://github.com/elidianaandrade" target="_blank">EA</a>. 
             </span>
         </div>
     </aside>
     <main id="home">
-        <span>Hello, Guest</span>
+        <span class="subheading">Hello, Guest</span>
         <h1 class="title">Which pokemon will you choose today?</h1>
 
         <div id="choosePokemon">
@@ -80,14 +79,30 @@
                     <input type="text"
                             placeholder="search pokemon..."
                             id="searchPokemon" 
-                            class="choose-pokemon__search">
+                            class="choose-pokemon__search"> 
                 </form>
                 <div class="choose-pokemon__details">
                     <div>
                         <span class="choose-pokemon__name"></span>
                         <span class="choose-pokemon__number"></span>
                     </div>
-                    <div class="choose-pokemon__skills"></div>
+
+                    <span class="choose-pokemon__subtitle">Type:
+                        <span class="choose-pokemon__types"></span>
+                    </span>
+                    <span class="choose-pokemon__subtitle">Abilites:
+                        <span class="choose-pokemon__abilities"></span>
+                    </span>
+                    <div>
+                        <span class="choose-pokemon__subtitle">Weight:
+                            <span class="choose-pokemon__weight"></span> kg
+                        </span>
+                        <span class="choose-pokemon__subtitle">|
+                        </span>
+                        <span class="choose-pokemon__subtitle">Height:
+                            <span class="choose-pokemon__height"></span> m
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="choose-pokemon__content2">
