@@ -3,7 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    margin: 2.5rem 3rem 1.25rem 2.5rem !important;
+    margin: 1.25rem 3rem 1.25rem 2.5rem !important;
+}
+
+#pokedex h2 {
+    border-bottom: 0.1rem solid var(--secondary-background-color);
+    padding: 1rem 0;
 }
 
 /* POKÉMON LIST STYLE */
@@ -14,7 +19,7 @@
     list-style: none;
     width: 92%;
     padding: 0;
-    margin: 0;
+    margin-top: 1rem;
 }
 
 .pokemon {
@@ -126,9 +131,10 @@
 .pokemon__number {
     text-transform: lowercase;
     align-self: flex-end;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--gray-400);
+    opacity: 60%;
 }
 
 .types-list {
@@ -144,12 +150,13 @@
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.025rem;
-    color: var(--white);
+    color: var(--gray-100);
     text-align: center;
     border-radius: 25rem;
     padding: 0.4rem 0.8rem;
     filter: brightness(1.1);
     user-select: none;
+    text-shadow: 0.05rem 0.05rem 0.1rem var(--primary-background-color);
 }
 
 /* Types Colors Style */

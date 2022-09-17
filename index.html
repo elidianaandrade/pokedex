@@ -73,15 +73,34 @@
     <main id="home">
         <span>Hello, Guest</span>
         <h1 class="title">Which pokemon will you choose today?</h1>
-        <div>
-            
+
+        <div id="choosePokemon">
+            <div class="choose-pokemon__content1">
+                <form class="choose-pokemon__form">
+                    <input type="text"
+                            placeholder="search pokemon..."
+                            id="searchPokemon" 
+                            class="choose-pokemon__search">
+                </form>
+                <div class="choose-pokemon__details">
+                    <div>
+                        <span class="choose-pokemon__name"></span>
+                        <span class="choose-pokemon__number"></span>
+                    </div>
+                    <div class="choose-pokemon__skills"></div>
+                </div>
+            </div>
+            <div class="choose-pokemon__content2">
+                <div class="choose-pokemon__cover">
+                    <img class="choose-pokemon__img" src="" alt="">
+                </div>
+            </div>  
+
         </div>
     </main>
     <section id="pokedex">
         <h2>Pokédex</h2>
-        <ol id="pokemonsList" class="pokemons-list">
-            
-        </ol>
+        <ol id="pokemonsList" class="pokemons-list"></ol>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 <img src="src/assets/images/pokeball.png" alt="Pokeball">
