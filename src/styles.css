@@ -3,6 +3,9 @@
 :root {
     --primary-color: #FFCB05;
     --secondary-color: #3565AE;
+    --primary-background-color: #0A0E2D;
+    --secondary-background-color: #141936;
+    --shadow-color: #121630;
     --black: #080917;
     --white: #FCFCFC;
     --gray-100: #EAEAEA;
@@ -31,13 +34,6 @@
     --steel: #b9b7cf;
     --dragon: #6f38f6;
     --fairy: linear-gradient(to right, #d9a7c7, #fffcdc);
-
-    --title-color: var(--black);
-    --subheading-color: var(--primary-color);
-    --paragraph-color: var(--black);
-    --link-color: var(--black);
-    --link-active-color: var(--primary-color);
-    --icon-color: var(--secondary-color)
 }
 
 html {
@@ -49,8 +45,8 @@ html {
 }
 
 body {
-    background: var(--white);
-    color: var(--black);
+    background: var(--primary-background-color);
+    color: var(--white);
     font-family: 'Heebo', Arial, sans-serif;
 }
 
@@ -72,7 +68,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--gray-100);
+    background: var(--secondary-background-color);
     border-radius: 50rem;
 }
 /* SCROLLBAR STYLE END */
@@ -83,6 +79,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    margin: 2rem 3rem 1.25rem 2rem;
 } 
 
 .header__brand img {
@@ -90,6 +87,17 @@ header {
     padding: 0.5rem;
     pointer-events: none;
 }
+
+main {
+    margin: 2.5rem 3rem 1.25rem 2.5rem;
+}
+
+main div {
+    background: var(--secondary-background-color);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
 
 .footerbar {
     position: fixed;
@@ -100,7 +108,8 @@ header {
     align-items: center;
     width: 100%;
     height: 4rem;
-    background: var(--secondary-color);
+    background: var(--secondary-background-color);
+    margin: 0;
     z-index: 3;
 }
 
@@ -108,8 +117,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     list-style: none;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -117,17 +126,20 @@ header {
 .footerbar .menu__item .menu__link {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.25rem 1rem;
-    color: var(--white);
+    padding: 0.125rem 0.5rem;
+    width: 33vw;
+    height: 100%;
 }
 
 .footerbar .menu__link i {
     font-size: 1.5rem;
+    width: 1.5rem;
     height: 1.5rem;
     color: var(--white);
+    text-align: center;
 }
 
 .footerbar .menu__link i:hover {
@@ -139,13 +151,25 @@ header {
     height: 1.5rem;
 }
 
-.footerbar .footerbar .menu__link .menu__text{
-    color: var(--white);
-    font-size: 0.8rem;
+.footerbar .menu__link img:hover {
+    filter: invert(100%);
 }
 
+.footerbar .menu__link .menu__icon.active {
+    transform: scale(1.5);
+    transition: 0.4s;
+}
+
+.footerbar .menu__link .menu__text{
+    display: none;
+}
+
+/* Breakpoints */
 @media screen and (min-width: 576px) {
-    header, .footerbar {
+    body {
+        margin-left: 18rem;
+    } 
+    header img, .footerbar {
         display: none;
     }  
 }

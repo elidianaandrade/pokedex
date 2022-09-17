@@ -6,13 +6,15 @@
     justify-content: flex-start;
     align-items: center;
     width: 15rem;
-    height: 100%;
+    height: 94%;
     top: 0;
-    padding: 0.5rem;
-    margin: 0;
+    left: 0 !important;
     user-select: none;
     z-index: 3;
-    background: var(--secondary-color);
+    background: var(--secondary-background-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1.25rem;
 }
 
 .sidebar__brand {
@@ -61,6 +63,10 @@
 .sidebar .menu__link img {
     width: 1.8rem;
     height: 1.8rem;
+}
+
+.sidebar .menu__link img:hover {
+    filter: invert(100%);
 }
 
 .sidebar .sidebar .menu__link .menu__text{

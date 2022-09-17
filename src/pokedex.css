@@ -1,17 +1,18 @@
 #pokedex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem 1.5rem;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 2.5rem 3rem 1.25rem 2.5rem !important;
 }
 
 /* POKÉMON LIST STYLE */
 .pokemons-list {
     display: grid;
-    grid-template-columns: repeat(1, 100%);
+    grid-template-columns: repeat(2, 50%);
     gap: 1.5rem;
     list-style: none;
+    width: 92%;
     padding: 0;
     margin: 0;
 }
@@ -22,14 +23,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 10rem;
 }
 
 .pokemon__cover::before {
     position: absolute;
     content: '';
-    width: 10rem !important;
-    height: 10rem !important;
+    min-width: 10rem;
+    min-height: 10rem;
     background: url('./../src/assets/images/pokeball-white.png') no-repeat center;
     background-size: cover;
     transform: rotate(20deg);
@@ -42,12 +42,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 10rem;
+    min-width: 10rem;
+    min-height: 10rem;
     border-radius: 50rem;
     user-select: none;
     z-index: 1;
-    box-shadow: 0 0 0.4rem var(--gray-300);
+    box-shadow: inset 0 0 0.4rem var(--shadow-color);
     margin-bottom: -5rem;
 
 }
@@ -76,8 +76,8 @@
     width: 100%;
     height: 100%;
     list-style: none;
-    background: var(--gray-100);
-    box-shadow: 0 0 0.4rem var(--gray-100);
+    background: var(--secondary-background-color);
+    box-shadow: 0 0 0.4rem var(--shadow-color);
     border-radius: 0.8rem;
     padding: 5.5rem 1.5rem 1.5rem;
     margin: 0;
@@ -87,7 +87,8 @@
     font-size: 1rem;
     font-weight: 600;
     text-transform: capitalize;
-    color: var(--black);
+    color: var(--white);
+    letter-spacing: 0.05rem;
     padding: 0;
     margin: 0.25rem 0;
 }
@@ -201,46 +202,52 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
-    margin: 0;
+    padding: 0;
+    margin: 1.5rem 1rem;
 }
 
 .pagination button {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--gray-600);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
     background-color: var(--primary-color);
     border: 0.125rem solid var(--primary-color);
     border-radius: 50rem;
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem;
     margin: 0.25rem 0;
 }
 
+.pagination button span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-right: 0.5rem;
+}
+
+.pagination button img {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0;
+    margin: 0;
+}
+
 .pagination button:hover {
-    box-shadow: inset 0 0 0.4rem var(--yellow);
+    box-shadow: inset 0 0 0.4rem var(--secondary-background-color);
 }
 
 /* Breakpoints */
 @media screen and (min-width: 576px) {
-    #pokedex {
-        margin-left: 16rem;
-    }
-    .pokemons-list {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-    }  
-}
-
-
-@media screen and (min-width: 768px) {
     .pokemons-list {
         display: grid;
         grid-template-columns: repeat(3, 33%);
     }  
 }
 
-@media screen and (min-width: 1400px) {
+
+@media screen and (min-width: 768px) {
     .pokemons-list {
         display: grid;
         grid-template-columns: repeat(4, 25%);
