@@ -33,6 +33,14 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
+
+        pokemons.forEach(pokemon => {
+            const favoriteButton = document.getElementById(`favoriteButton${pokemon.number}`)
+
+            favoriteButton.addEventListener('click', () => {
+                favoriteButton.classList.toggle('active');
+            })
+        })
     })
 }
 
