@@ -6,11 +6,6 @@
     margin: 1.5rem 3rem 0 2.5rem;
 }
 
-#pokedex h2 {
-    border-bottom: 0.1rem solid var(--secondary-background-color);
-    padding: 1rem 0;
-}
-
 /* POKÉMON LIST STYLE */
 .pokemons-list {
     display: grid;
@@ -254,7 +249,6 @@
     border-radius: 50rem;
     cursor: pointer;
     padding: 0.3rem;
-    margin-bottom: 1rem;
 }
 
 .pagination button span {
@@ -265,6 +259,7 @@
 }
 
 .pagination button img {
+    pointer-events: none;
     width: 1.8rem;
     height: 1.8rem;
     padding: 0;

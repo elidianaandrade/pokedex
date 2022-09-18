@@ -63,6 +63,12 @@ a:hover {
     color: var(--primary-color) !important;
 }
 
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 0.1rem solid var(--secondary-background-color);
+    padding: 1rem 0;
+}
+
 /* SCROLLBAR STYLE */
 ::-webkit-scrollbar {
     width: 0.4rem;
@@ -149,6 +155,11 @@ header {
     margin-top: 0.15rem;
 }
 /* MENU STYLE END */
+
+#favorites {
+    margin: 1.5rem 3rem 0 2.5rem;
+}
+
 footer {
     display: flex;
     flex-direction: row;
@@ -170,7 +181,7 @@ footer a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     background: var(--secondary-background-color);
     margin: 0;
     z-index: 3;
@@ -221,21 +232,6 @@ footer a {
 @media screen and (max-width: 768px) {
     footer {
         margin-bottom: 4rem;
-    }
-
-    #choosePokemon {
-        grid-template-columns: repeat(1, 100%);
-        padding: 0.5rem;
-    }
-
-    .choose-pokemon__content1::before {
-        width: 15rem;
-        height: 15rem;
-        margin: 8rem 0 0 1.5rem;
-    }
-
-    .choose-pokemon__content2 {
-        margin-bottom: 1.5rem;
     }
 }
 

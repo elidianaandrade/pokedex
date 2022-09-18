@@ -161,3 +161,21 @@ main .title {
     transform: scale(1.15);
     transition: 0.4s;
 }
+
+@media screen and (max-width: 768px) {
+    #choosePokemon {
+        grid-template-columns: repeat(1, 100%);
+        padding: 0.5rem;
+    }
+
+    .choose-pokemon__content1::before {
+        width: 15rem;
+        height: 15rem;
+        margin: 8rem 0 0 1.5rem;
+    }
+
+    .choose-pokemon__content2 {
+        margin-bottom: 1.5rem;
+        z-index: 2;
+    }
+}

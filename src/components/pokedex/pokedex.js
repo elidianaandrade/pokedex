@@ -1,6 +1,6 @@
-/* POKÉDEX LIST */ 
 const pokemonList = document.getElementById('pokemonsList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonListFavorites = document.getElementById('pokemonListFavorites')
 
 const maxPokemons = 151
 const limit = 9
@@ -28,7 +28,6 @@ function convertPokemonToLi(pokemon) {
         </li> 
     `
 }
-
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
@@ -39,6 +38,12 @@ function loadPokemonItens(offset, limit) {
 
             favoriteButton.addEventListener('click', () => {
                 favoriteButton.classList.toggle('active');
+
+                if (favoriteButton.classList.contains('active')) {
+                    addToFavorite()
+                } else {
+                    removeFromFavorite() 
+                }
             })
         })
     })
@@ -60,5 +65,10 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
+function addToFavorite() {
+    console.log('favoritado')
+}
 
-/* POKÉDEX LIST END */
+function removeFromFavorite() {
+    console.log('removido')
+}
