@@ -34,17 +34,18 @@ pokeApi.getPokemons = (offset = 0, limit = 9) => {
 }
 
 /* CHOOSE POKEMON */
-const pokemonName = document.querySelector('.choose-pokemon__name');
-const pokemonNumber = document.querySelector('.choose-pokemon__number');
-const pokemonTypes = document.querySelector('.choose-pokemon__types');
-const pokemonAbilities = document.querySelector('.choose-pokemon__abilities');
-const pokemonHeight = document.querySelector('.choose-pokemon__height');
-const pokemonWeight = document.querySelector('.choose-pokemon__weight');
+const pokemonDetails = document.querySelector('.choose-pokemon__details')
+const pokemonName = document.querySelector('.choose-pokemon__name')
+const pokemonNumber = document.querySelector('.choose-pokemon__number')
+const pokemonTypes = document.querySelector('.choose-pokemon__types')
+const pokemonAbilities = document.querySelector('.choose-pokemon__abilities')
+const pokemonHeight = document.querySelector('.choose-pokemon__height')
+const pokemonWeight = document.querySelector('.choose-pokemon__weight')
 
-const pokemonImg = document.querySelector('.choose-pokemon__img');
+const pokemonImg = document.querySelector('.choose-pokemon__img')
 
-const form = document.querySelector('.choose-pokemon__form');
-const input = document.querySelector('.choose-pokemon__search');
+const form = document.querySelector('.choose-pokemon__form')
+const input = document.querySelector('.choose-pokemon__search')
 let searchPokemon = 1;
 
 const getPokemon = async (pokemon) => {
@@ -67,16 +68,20 @@ const renderPokemon = async (pokemon) => {
         pokemonNumber.innerHTML = `nº ${pokemonData.id}`
         pokemonTypes.innerHTML = pokemonData.types.map((typeSlot) => typeSlot.type.name).join(', ')
         pokemonAbilities.innerHTML = pokemonData.abilities.map((abilitiesSlot) => abilitiesSlot.ability.name).join(', ')
-        pokemonHeight.innerHTML = pokemonData.height / 10
-        pokemonWeight.innerHTML = pokemonData.weight / 10
+        pokemonHeight.innerHTML = `${pokemonData.height / 10} m`
+        pokemonWeight.innerHTML = `${pokemonData.weight / 10} kg`
         pokemonImg.src = pokemonData.sprites.other.dream_world.front_default
         input.value = '';
     } else {
         pokemonName.innerHTML = 'Pokémon not found'
         pokemonNumber.innerHTML = ''
         pokemonTypes.innerHTML = ''
+        pokemonAbilities.innerHTML = ''
+        pokemonHeight.innerHTML = ''
+        pokemonWeight.innerHTML = ''
         pokemonImg.src = 'src/assets/images/whos-that-pokemon.png'
-        input.value = '';
+        pokemonDetails.style.display = 'none'
+        input.value = ''
     }
 }
 

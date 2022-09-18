@@ -63,10 +63,6 @@
             </ul>
         </div>
         <div class="sidebar__footer">
-            <span class="text"> Pokédex. Made with 
-                <i class="bi bi-suit-heart"></i> by 
-                <a href="https://github.com/elidianaandrade" target="_blank">EA</a>. 
-            </span>
         </div>
     </aside>
     <main id="home">
@@ -78,30 +74,32 @@
                 <form class="choose-pokemon__form">
                     <input type="text"
                             placeholder="search pokemon..."
+                            autocomplete="off"
                             id="searchPokemon" 
                             class="choose-pokemon__search"> 
                 </form>
-                <div class="choose-pokemon__details">
+                <div class="choose-pokemon__informations">
                     <div>
                         <span class="choose-pokemon__name"></span>
                         <span class="choose-pokemon__number"></span>
                     </div>
-
-                    <span class="choose-pokemon__subtitle">Type:
-                        <span class="choose-pokemon__types"></span>
-                    </span>
-                    <span class="choose-pokemon__subtitle">Abilites:
-                        <span class="choose-pokemon__abilities"></span>
-                    </span>
-                    <div>
-                        <span class="choose-pokemon__subtitle">Weight:
-                            <span class="choose-pokemon__weight"></span> kg
+                    <div class="choose-pokemon__details">
+                        <span class="choose-pokemon__subtitle">Type:
+                            <span class="choose-pokemon__types"></span>
                         </span>
-                        <span class="choose-pokemon__subtitle">|
+                        <span class="choose-pokemon__subtitle">Abilites:
+                            <span class="choose-pokemon__abilities"></span>
                         </span>
-                        <span class="choose-pokemon__subtitle">Height:
-                            <span class="choose-pokemon__height"></span> m
-                        </span>
+                        <div class="choose-pokemon__dimensions">
+                            <div class="content1">
+                                <span class="choose-pokemon__weight"></span>
+                                <span class="choose-pokemon__subtitle">Weight</span>
+                            </div>
+                            <div class="content2">         
+                                <span class="choose-pokemon__height"></span>
+                                <span class="choose-pokemon__subtitle">Height</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,33 +121,39 @@
             </button>
         </div>
     </section>
-    <footer class="footerbar">
-        <ul class="menu">
-            <li class="menu__item active">
-                <a href="#home" title="Home" class="menu__link">
-                    <i class="menu__icon bi bi-house-door"></i>
-                    <span class="menu__text">Home</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="#pokedex" title="Pokédex" class="menu__link">
-                    <i class="menu__icon bi bi-record-circle"></i>
-                    <span class="menu__text">Pokédex</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="#favorites" title="Favorites" class="menu__link">
-                    <i class="menu__icon bi bi-heart"></i>
-                    <span class="menu__text">Favorites</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a href="#profile" title="Profile" class="menu__link">
-                      <i class="menu__icon bi bi-person-circle"></i>
-                      <span class="menu__text">Profile</span>
-                </a>
-            </li>
-        </ul>
+    <footer>
+        <div class="footerbar">
+            <ul class="menu">
+                <li class="menu__item active">
+                    <a href="#home" title="Home" class="menu__link">
+                        <i class="menu__icon bi bi-house-door"></i>
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#pokedex" title="Pokédex" class="menu__link">
+                        <i class="menu__icon bi bi-record-circle"></i>
+                        <span class="menu__text">Pokédex</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#favorites" title="Favorites" class="menu__link">
+                        <i class="menu__icon bi bi-heart"></i>
+                        <span class="menu__text">Favorites</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#profile" title="Profile" class="menu__link">
+                          <i class="menu__icon bi bi-person-circle"></i>
+                          <span class="menu__text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <span class="text"> Pokédex. Made with 
+            <i class="bi bi-suit-heart"></i> by 
+            <a href="https://github.com/elidianaandrade" target="_blank">EA</a>. 
+        </span>
     </footer>
     <noscript>
         <h3>You need to enable JavaScript to run this app.</h3>

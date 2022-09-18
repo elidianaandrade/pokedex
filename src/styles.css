@@ -141,7 +141,6 @@ main .title {
     justify-content: space-between;
     align-items: flex-start;
     gap: 0.8rem;
-    height: 18rem;
     padding: 1rem;
 }
 
@@ -159,9 +158,10 @@ main .title {
     width: 100%;
 }
 
-.choose-pokemon__details {
+.choose-pokemon__informations {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 1rem;
     width: 100%;
     padding: 0.5rem;
@@ -180,6 +180,13 @@ main .title {
     text-transform: lowercase;
 }
 
+.choose-pokemon__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
 .choose-pokemon__subtitle {
     color: var(--white);
 }
@@ -187,6 +194,34 @@ main .title {
 .choose-pokemon__subtitle span {
     color: var(--primary-color); 
     text-transform: capitalize;
+}
+
+.choose-pokemon__dimensions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem
+}
+
+.choose-pokemon__dimensions  .choose-pokemon__subtitle {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+}
+
+.choose-pokemon__dimensions .content1,
+.choose-pokemon__dimensions .content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary-color);
+    padding: 0.5rem 0;
+}
+
+.choose-pokemon__weight,
+.choose-pokemon__height {
+    font-size: 1.25rem;
+    text-transform: lowercase !important;
 }
 
 .choose-pokemon__content2 {
@@ -204,7 +239,7 @@ main .title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25rem;
+    width: 100%;
     height: 18rem;
     background: url('assets/images/pokemon-scenery.png') no-repeat center;
     background-size: cover;
@@ -215,8 +250,9 @@ main .title {
 }
 
 .choose-pokemon__img {
+    max-width: 65%;
     height: 10rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -256,6 +292,18 @@ main .title {
     background: var(--primary-color) !important;
 }
 /* MENU STYLE END */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    color: var(--gray-400);
+}
+
+footer a {
+    color: var(--gray-400);
+}
 
 .footerbar {
     position: fixed;
@@ -314,7 +362,9 @@ main .title {
     }
 
     .choose-pokemon__content1::before {
-        display: none;
+        width: 15rem;
+        height: 15rem;
+        margin: 0;
     }
 
     .choose-pokemon__content2 {
