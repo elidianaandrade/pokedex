@@ -353,6 +353,7 @@ footer a {
 .footerbar .menu__item {
     width: 25vw;
     border-radius: 0;
+    background: transparent;
 }
 
 .footerbar .menu__item .menu__link {
