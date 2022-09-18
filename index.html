@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="src/components/sidebar/sidebar.css">
+    <link rel="stylesheet" href="src/components/pokemon-display/pokemon-display.css">
     <link rel="stylesheet" href="src/components/pokedex/pokedex.css">
 </head>
 <body>
@@ -66,7 +67,8 @@
         </div>
     </aside>
     <main id="home">
-        <span class="subheading">Hello, Guest</span>
+        <span class="subheading">Hello,</span>
+        <span id="userFirstName" class="subheading">Guest</span>
         <h1 class="title">Which pokemon will you choose today?</h1>
 
         <div id="choosePokemon">
@@ -86,6 +88,7 @@
                     <div class="choose-pokemon__details">
                         <span class="choose-pokemon__subtitle">Type:
                             <span class="choose-pokemon__types"></span>
+                            <ol id="typesList" class="types-list"></ol>
                         </span>
                         <span class="choose-pokemon__subtitle">Abilites:
                             <span class="choose-pokemon__abilities"></span>
@@ -160,6 +163,7 @@
     </noscript>
     <script src="src/pokemon-model.js"></script>
     <script src="src/pokemon-api.js"></script>
+    <script src="src/components/pokemon-display/pokemon-display.js"></script>
     <script src="src/components/pokedex/pokedex.js"></script>
     <script src="src/main.js"></script>
 </body>
