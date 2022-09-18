@@ -132,7 +132,6 @@ main .title {
     background: url('assets/images/pokeball-white.png') no-repeat top center;
     background-size: cover;
     opacity: 2%;
-    object-fit: cover;
 }
 
 
@@ -189,7 +188,6 @@ main .title {
     color: var(--primary-color); 
     text-transform: capitalize;
 }
-
 
 .choose-pokemon__content2 {
     display: flex;
@@ -313,6 +311,15 @@ main .title {
 @media screen and (max-width: 768px) {
     #choosePokemon {
         grid-template-columns: repeat(1, 100%);
+    }
+
+    .choose-pokemon__content1::before {
+        position: absolute;
+        content: '';
+        width: 15rem;
+        height: 15rem;
+        bottom: 0;
+        margin: auto;
     }
 }
 
