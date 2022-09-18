@@ -39,8 +39,8 @@
 
 .sidebar__menu {
     align-self: flex-start;
+    width: 100%;
     height: 100%;
-    padding: 1rem 1.5rem;
 }
 
 .sidebar .menu {
@@ -48,11 +48,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     list-style: none;
     padding: 0;
     margin: 1.5rem 0;
+}
+
+.sidebar .menu__item {
+    width: 100%;
 }
 
 .sidebar .menu__item .menu__link {
