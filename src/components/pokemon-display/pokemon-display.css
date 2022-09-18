@@ -1,10 +1,9 @@
-
 main {
     padding: 4.5rem 3rem 0 2.5rem;
 }
 
 main .subheading {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: var(--primary-color);
     text-transform: capitalize;
 }
@@ -30,7 +29,7 @@ main .title {
     width: 15rem;
     height: 9rem;
     margin: 9rem 0 0 -1.5rem;
-    background: url('assets/images/pokeball-white.png') no-repeat top center;
+    background: url('./../../assets/images/pokeball-white.png') no-repeat top center;
     background-size: cover;
     opacity: 2%;
 }
