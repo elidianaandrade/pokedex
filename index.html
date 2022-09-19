@@ -69,7 +69,7 @@
             <div class="choose-pokemon__content1">
                 <form class="choose-pokemon__form">
                     <input type="text"
-                            placeholder="search pokemon..."
+                            placeholder="search pokemon name or number..."
                             autocomplete="off"
                             id="searchPokemon" 
                             class="choose-pokemon__search"> 
@@ -110,6 +110,13 @@
     </main>
     <section id="pokedex">
         <h2>Pokédex</h2>
+        <div class="pokemons-filter">
+            <div class="pokemons-length">
+                <img src="src/assets/images/pokeball.png" alt="Pokeball">
+                <span id="pokedexListLength"></span>
+            </div>
+        </div>
+
         <ol id="pokemonsList" class="pokemons-list"></ol>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
@@ -120,6 +127,10 @@
     </section>
     <section id="favorites">
         <h2>Favorites</h2>
+        <div class="pokemons-length">
+            <img src="src/assets/images/pokeball.png" alt="Pokeball">
+            <span id="pokemonListFavoritesLength">0</span>
+        </div>
         <ol id="pokemonListFavorites" class="pokemons-list"></ol>
     </section>
     <footer>

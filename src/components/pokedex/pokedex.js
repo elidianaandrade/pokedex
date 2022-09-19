@@ -1,10 +1,12 @@
 const pokemonList = document.getElementById('pokemonsList')
+const pokemonListLength = document.getElementById('pokedexListLength')
 const loadMoreButton = document.getElementById('loadMoreButton')
 const pokemonListFavorites = document.getElementById('pokemonListFavorites')
+const pokemonListFavoritesLength = document.getElementById('pokemonListFavoritesLength')
 
 let pokemonWishlist = []
 
-const maxPokemons = 151
+const maxPokemons = 648
 const limit = 12
 let offset = 0
 
@@ -32,10 +34,12 @@ function convertPokemonToLi(pokemon) {
 }
 
 function loadPokemonItens(offset, limit) {
+    pokedexListLength.innerHTML = maxPokemons
+
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-        
+        const pokemonListHtml = pokemons.map(convertPokemonToLi).join('')
+        pokemonList.innerHTML += pokemonListHtml
+
         pokemons.forEach(pokemon => {
             const favoriteButton = document.getElementById(`favoriteButton${pokemon.number}`)
 
@@ -99,6 +103,7 @@ function removeFromFavorite(pokemon) {
 function renderWishlist() {
     const newPokemonHtml =  pokemonWishlist.map(convertPokemonToFavoriteLi).join('')
     pokemonListFavorites.innerHTML =  newPokemonHtml
+    pokemonListFavoritesLength.innerHTML = pokemonWishlist.length
 
     pokemonWishlist.forEach(pokemon => { 
         const favoritedButton = document.getElementById(`favoritedButton${pokemon.number}`)

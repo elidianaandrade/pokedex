@@ -99,7 +99,9 @@ main .title {
 .choose-pokemon__dimensions {
     display: flex;
     flex-direction: row;
-    gap: 1rem
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 .choose-pokemon__dimensions  .choose-pokemon__subtitle {

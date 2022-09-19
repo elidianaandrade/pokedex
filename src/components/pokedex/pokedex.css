@@ -6,6 +6,21 @@
     margin: 1.5rem 3rem 0 2.5rem;
 }
 
+.pokemons-length {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.pokemons-length img {
+    pointer-events: none;
+    user-select: none;
+    height: 1.55rem;
+}
+
 /* POKÉMON LIST STYLE */
 .pokemons-list {
     display: grid;
@@ -110,7 +125,7 @@
     background: var(--secondary-background-color);
     box-shadow: 0 0 0.4rem var(--shadow-color);
     border-radius: 0.8rem;
-    padding: 6.5rem 1.5rem 1.5rem;
+    padding: 6rem 1.5rem 1.5rem;
     margin: 0;
 }
 
