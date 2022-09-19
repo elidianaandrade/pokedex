@@ -64,7 +64,7 @@
     box-shadow: 0 0 0.4rem var(--shadow-color);
     border: none;
     border-radius: 50rem;
-    cursor: pointer;
+    cursor: pointer !important;
     z-index: 3;
 
     font-size: 1.25rem;
@@ -76,6 +76,7 @@
     -webkit-text-stroke-width: 0.085rem !important;
     -webkit-text-stroke-color: var(--white) !important;
     color: transparent !important;
+    cursor: pointer !important;
 }
 
 .bi-heart-fill:hover, .bi-heart-fill.active {
@@ -269,6 +270,22 @@
 .pagination button:hover {
     box-shadow: inset 0 0 0.4rem var(--secondary-background-color);
 }
+
+
+/* FAVORITES STYLE */
+.pokemon-favorited {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon-favorited__cover {
+    background: var(--primary-color);
+}
+
+/* FAVORITES STYLE END */
+
 
 /* Breakpoints */
 @media screen and (min-width: 768px) {

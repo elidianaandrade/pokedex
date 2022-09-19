@@ -17,10 +17,9 @@ Pokédex desenvolvida como Desafio de Projeto na Formação JavaScript Developer
 ![CSS3](https://img.shields.io/badge/CSS3-000?style=for-the-badge&logo=css3&logoColor=7520FF)
 
 ## ⚙ Funcionalidades
-- [x] Pesquisa de Pokémons;
+- [x] Display com pesquisa de Pokémons;
 - [x] Listagem de Pokémons;
-- [ ] Wishlist;
-- [ ] Profile.
+- [x] Wishlist;
 
 ## 🔍 Referências
 - [Repositório do Instrutor Renan J Paula](https://github.com/digitalinnovationone/js-developer-pokedex).

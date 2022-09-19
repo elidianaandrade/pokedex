@@ -2,18 +2,20 @@ const pokemonList = document.getElementById('pokemonsList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 const pokemonListFavorites = document.getElementById('pokemonListFavorites')
 
+let pokemonWishlist = []
+
 const maxPokemons = 151
-const limit = 9
+const limit = 12
 let offset = 0
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon">
+        <li id="pokemon${pokemon.number}" class="pokemon">
             <div class="pokemon__cover ${pokemon.type}">
                 <button id="favoriteButton${pokemon.number}"
                     class="button-favorite bi-heart-fill">
                 </button>
-                <img class="pokemon__img " 
+                <img class="pokemon__img" 
                     src="${ pokemon.img }" 
                     alt="Pokémon ${ pokemon.name }">
             </div>
@@ -28,22 +30,18 @@ function convertPokemonToLi(pokemon) {
         </li> 
     `
 }
+
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
-
+        
         pokemons.forEach(pokemon => {
             const favoriteButton = document.getElementById(`favoriteButton${pokemon.number}`)
 
             favoriteButton.addEventListener('click', () => {
-                favoriteButton.classList.toggle('active');
-
-                if (favoriteButton.classList.contains('active')) {
-                    addToFavorite()
-                } else {
-                    removeFromFavorite() 
-                }
+                favoriteButton.classList.toggle('active')
+                favoriteButton.classList.contains('active') ? addToFavorite(pokemon) : removeFromFavorite(pokemon)
             })
         })
     })
@@ -65,10 +63,49 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
-function addToFavorite() {
-    console.log('favoritado')
+function convertPokemonToFavoriteLi(pokemon) {
+    return `
+        <li id="pokemon${pokemon.number}Favorited" class="pokemon-favorited">
+            <div class="pokemon__cover pokemon-favorited__cover">
+                <button id="favoritedButton${pokemon.number}"
+                    class="button-favorite bi-heart-fill active">
+                </button>
+                <img class="pokemon__img" 
+                    src="${ pokemon.img }" 
+                    alt="Pokémon ${ pokemon.name }">
+            </div>
+            <div class="pokemon__details">
+                <span class="pokemon__name">${ pokemon.name } 
+                    <span class="pokemon__number"> #${ pokemon.number }</span>
+                </span>
+                <ol class="types-list">
+                    ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
+                </ol>
+            </div>
+        </li> 
+    `
 }
 
-function removeFromFavorite() {
-    console.log('removido')
+function addToFavorite(pokemon) {
+    pokemonWishlist.push(pokemon)
+    renderWishlist()
+}
+
+function removeFromFavorite(pokemon) {
+    pokemonWishlist = [...pokemonWishlist.filter(p => p.number != pokemon.number)]
+    renderWishlist()
+}
+
+function renderWishlist() {
+    const newPokemonHtml =  pokemonWishlist.map(convertPokemonToFavoriteLi).join('')
+    pokemonListFavorites.innerHTML =  newPokemonHtml
+
+    pokemonWishlist.forEach(pokemon => { 
+        const favoritedButton = document.getElementById(`favoritedButton${pokemon.number}`)
+
+        favoritedButton.addEventListener('click', () => {
+            removeFromFavorite(pokemon)
+            document.getElementById(`favoriteButton${pokemon.number}`).classList.remove('active')
+        })
+    })
 }
