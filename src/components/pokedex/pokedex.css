@@ -377,7 +377,8 @@
     width: 100%;
 }
 
-.modal-body__content2 .choose-pokemon__dimensions {
+.modal-body__content2 .choose-pokemon__dimensions,
+.pokemon-favorited .choose-pokemon__dimensions {
     justify-content: center !important;
 }
 

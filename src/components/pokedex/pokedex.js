@@ -89,13 +89,8 @@ function loadPokemonItens(offset, limit) {
                 favoriteButton.classList.contains('active') ? addToFavorite(pokemon) : removeFromFavorite(pokemon)
             })
 
-            openModal.addEventListener('click', () => {
-                modalPokemon.classList.add('active')  
-            })
-            
-            closeModal.addEventListener('click', () => {                
-                modalPokemon.classList.remove('active')  
-            })
+            openModal.addEventListener('click', () => modalPokemon.classList.add('active'))
+            closeModal.addEventListener('click', () => modalPokemon.classList.remove('active'))
         })
     })
 }
@@ -134,6 +129,18 @@ function convertPokemonToFavoriteLi(pokemon) {
                 <ol class="types-list">
                     ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
                 </ol>
+                <div class="choose-pokemon__details">
+                    <div class="choose-pokemon__dimensions">
+                        <div class="content1">
+                            <span class="choose-pokemon__weight">${ pokemon.weight }</span>
+                            <span class="choose-pokemon__subtitle">Weight</span>
+                        </div>
+                        <div class="content2">         
+                            <span class="choose-pokemon__height">${ pokemon.height }</span>
+                            <span class="choose-pokemon__subtitle">Height</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </li> 
     `
