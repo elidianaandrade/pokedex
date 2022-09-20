@@ -14,8 +14,7 @@
     --gray-400: #8B8B8B;
     --gray-500: #2D3037;
     --gray-600: #212327;
-    --yellow: #e6a900;
-
+    
     --normal: linear-gradient(to right, #636363, #a2ab58);
     --grass: linear-gradient(to right, #11998e, #38ef7d);
     --fire: linear-gradient(to right, #fe8c00, #f83600);
@@ -166,6 +165,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1.5rem 0;
+    width: 100%;
     color: var(--gray-400);
 }
 

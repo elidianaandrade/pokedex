@@ -287,6 +287,135 @@
 }
 
 
+/* MODAL STYLE */
+.modal {
+    display: none;
+    transition: 0.4s;
+}
+
+.modal.active {
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: auto !important;
+    z-index: 4;
+    transition: 0.4s;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    width: 18rem;
+    height: 25rem;
+    border-radius: 0.8rem;  
+    border: 0.063rem solid  rgba(10, 14, 45, 0.8);
+    background: rgba(20, 25, 54, 0.4);
+    box-shadow: 0.05rem 0.05rem 0.2rem var(--shadow-color);
+    backdrop-filter: blur( 0.25rem );
+    padding: 1.6rem 1.5rem;
+    margin: auto;
+    z-index: 4;
+}
+
+.modal-content .modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.modal-header span, .close-modal {
+    font-size: 1.15rem;
+    color: var(--white);
+}
+
+.close-modal {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
+    transform: scale(1.25);
+    transition: 0.4s;
+}
+
+.modal-content .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body__content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-body__content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.modal-body__content2 .choose-pokemon__dimensions {
+    justify-content: center !important;
+}
+
+.modal-body__content2 .content1,
+.modal-body__content2 .content2,
+.modal-body__content2 .content3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary-color);
+    padding: 0.5rem 0;
+}
+
+.modal-content .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(10, 14, 45, 0.8);
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+}
+/* MODAL STYLE END */
+
+
 /* FAVORITES STYLE */
 .pokemon-favorited {
     display: flex;
