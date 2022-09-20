@@ -12,9 +12,9 @@ let offset = 0
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li id="pokemon${pokemon.number}" class="pokemon">
+        <li id="pokemon${pokemon.id}" class="pokemon">
             <div class="pokemon__cover ${pokemon.type}">
-                <button id="favoriteButton${pokemon.number}"
+                <button id="favoriteButton${pokemon.id}"
                     class="button-favorite bi-heart-fill">
                 </button>
                 <img class="pokemon__img" 
@@ -23,7 +23,7 @@ function convertPokemonToLi(pokemon) {
             </div>
             <div class="pokemon__details">
                 <span class="pokemon__name">${ pokemon.name } 
-                    <span class="pokemon__number"> #${ pokemon.number }</span>
+                    <span class="pokemon__number"> #${ pokemon.id }</span>
                 </span>
                 <ol class="types-list">
                     ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
@@ -41,7 +41,7 @@ function loadPokemonItens(offset, limit) {
         pokemonList.innerHTML += pokemonListHtml
 
         pokemons.forEach(pokemon => {
-            const favoriteButton = document.getElementById(`favoriteButton${pokemon.number}`)
+            const favoriteButton = document.getElementById(`favoriteButton${pokemon.id}`)
 
             favoriteButton.addEventListener('click', () => {
                 favoriteButton.classList.toggle('active')
@@ -69,9 +69,9 @@ loadMoreButton.addEventListener('click', () => {
 
 function convertPokemonToFavoriteLi(pokemon) {
     return `
-        <li id="pokemon${pokemon.number}Favorited" class="pokemon-favorited">
+        <li id="pokemon${pokemon.id}Favorited" class="pokemon-favorited">
             <div class="pokemon__cover pokemon-favorited__cover">
-                <button id="favoritedButton${pokemon.number}"
+                <button id="favoritedButton${pokemon.id}"
                     class="button-favorite bi-heart-fill active">
                 </button>
                 <img class="pokemon__img" 
@@ -80,7 +80,7 @@ function convertPokemonToFavoriteLi(pokemon) {
             </div>
             <div class="pokemon__details">
                 <span class="pokemon__name">${ pokemon.name } 
-                    <span class="pokemon__number"> #${ pokemon.number }</span>
+                    <span class="pokemon__number"> #${ pokemon.id }</span>
                 </span>
                 <ol class="types-list">
                     ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
@@ -96,7 +96,7 @@ function addToFavorite(pokemon) {
 }
 
 function removeFromFavorite(pokemon) {
-    pokemonWishlist = [...pokemonWishlist.filter(p => p.number != pokemon.number)]
+    pokemonWishlist = [...pokemonWishlist.filter(p => p.id != pokemon.id)]
     renderWishlist()
 }
 
@@ -106,11 +106,11 @@ function renderWishlist() {
     pokemonListFavoritesLength.innerHTML = pokemonWishlist.length
 
     pokemonWishlist.forEach(pokemon => { 
-        const favoritedButton = document.getElementById(`favoritedButton${pokemon.number}`)
+        const favoritedButton = document.getElementById(`favoritedButton${pokemon.id}`)
 
         favoritedButton.addEventListener('click', () => {
             removeFromFavorite(pokemon)
-            document.getElementById(`favoriteButton${pokemon.number}`).classList.remove('active')
+            document.getElementById(`favoriteButton${pokemon.id}`).classList.remove('active')
         })
     })
 }

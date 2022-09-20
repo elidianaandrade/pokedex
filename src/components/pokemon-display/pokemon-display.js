@@ -44,9 +44,11 @@ const renderPokemon = async (pokemon) => {
 form.addEventListener('submit', (search) => {
     search.preventDefault();
 
-    if (input.value != ' ') {
+    if (input.value > maxPokemons || input.value == ' ') {
+        input.value = ''
+    } else {
         renderPokemon(input.value.toLowerCase());
-    } 
+    }
 });
 
 renderPokemon(searchPokemon)

@@ -7,7 +7,7 @@
 # Pokédex
 
 ## 🔴 Sobre o projeto
-Pokédex desenvolvida como Desafio de Projeto na Formação JavaScript Developer da [Digital Innovation One](https://www.dio.me/).
+Pokédex desenvolvida através do consumo da API REST [PokéApi](https://pokeapi.co/), como Desafio de Projeto na Formação JavaScript Developer da [Digital Innovation One](https://www.dio.me/).
 
 [![Preview](https://img.shields.io/badge/Preview-000?style=for-the-badge&logo=github&logoColor=7520FF)](https://elidianaandrade.github.io/pokedex/)
 
@@ -19,7 +19,8 @@ Pokédex desenvolvida como Desafio de Projeto na Formação JavaScript Developer
 ## ⚙ Funcionalidades
 - [x] Display com pesquisa de Pokémons;
 - [x] Listagem de Pokémons;
-- [x] Wishlist;
+- [x] Expandir Listagem de Pokémons;
+- [x] Listagem de Pokémons Favoritos.
 
 ## 🔍 Referências
 - [Repositório do Instrutor Renan J Paula](https://github.com/digitalinnovationone/js-developer-pokedex).
