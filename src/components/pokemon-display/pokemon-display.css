@@ -122,7 +122,6 @@ main .title {
     margin: 0;
 }
 
-.choose-pokemon__hp,
 .choose-pokemon__weight,
 .choose-pokemon__height {
     font-size: 1.25rem;
