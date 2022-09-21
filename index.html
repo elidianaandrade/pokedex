@@ -101,6 +101,10 @@
             <div class="choose-pokemon__content2">
                 <div class="choose-pokemon__cover">
                     <img class="choose-pokemon__img" src="" alt="">
+                    <div class="choose-pokemon__buttons">
+                      <i id="buttonPrev" class="choose-pokemon__button bi bi-caret-left-fill"></i>  
+                      <i id="buttonNext" class="choose-pokemon__button bi bi-caret-right-fill"></i>  
+                    </div>
                 </div>
             </div>  
         </div>
@@ -116,9 +120,13 @@
 
         <ol id="pokemonsList" class="pokemons-list"></ol>
         <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                <img src="src/assets/images/pokeball.png" alt="Pokeball">
-                <span>Load More</span>
+            <button id="previousButton" type="button">
+                <i class="choose-pokemon__button bi bi-caret-left-fill"></i>  
+                <span>Prev</span>
+            </button>
+            <button id="nextButton" type="button">
+                <span>Next</span>
+                <i class="choose-pokemon__button bi bi-caret-right-fill"></i> 
             </button>
         </div>
     </section>

@@ -249,6 +249,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     width: 100%;
     padding: 0;
     margin: 1.5rem 1rem;
@@ -259,7 +260,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
     background-color: var(--primary-color);
     border: 0.125rem solid var(--primary-color);
     border-radius: 50rem;
@@ -271,7 +271,7 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--gray-600);
-    margin-right: 0.5rem;
+    margin: 0 0.5rem;
 }
 
 .pagination button img {
@@ -286,6 +286,14 @@
     box-shadow: inset 0 0 0.4rem var(--secondary-background-color);
 }
 
+.pagination button:hover .choose-pokemon__button {
+    color: var(--primary-color);
+    box-shadow: inset 0 0 0.4rem var(--secondary-background-color) !important;
+}
+
+#previousButton {
+    display: none;
+}
 
 /* MODAL STYLE */
 .modal {
@@ -385,7 +393,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 0.8rem 0 0.25rem;
     margin: 0;
 }

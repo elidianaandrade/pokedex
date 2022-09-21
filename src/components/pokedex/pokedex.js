@@ -1,6 +1,7 @@
 const pokemonList = document.getElementById('pokemonsList')
 const pokemonListLength = document.getElementById('pokedexListLength')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const previousButton = document.getElementById('previousButton')
+const nextButton = document.getElementById('nextButton')
 const pokemonListFavorites = document.getElementById('pokemonListFavorites')
 const pokemonListFavoritesLength = document.getElementById('pokemonListFavoritesLength')
 
@@ -54,7 +55,7 @@ function convertPokemonToLi(pokemon) {
                             <div class="abilities">
                                 <span class="choose-pokemon__subtitle">Abilites: </span>
                                 <ol class="abilities-list">
-                                    ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(', ') }
+                                    ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(' ') }
                                 </ol>
                             </div>
                             <div class="choose-pokemon__details">
@@ -84,7 +85,7 @@ function loadPokemonItens(offset, limit) {
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const pokemonListHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += pokemonListHtml
+        pokemonList.innerHTML = pokemonListHtml
 
         pokemons.forEach(pokemon => {
             const favoriteButton = document.getElementById(`favoriteButton${pokemon.id}`)
@@ -105,18 +106,31 @@ function loadPokemonItens(offset, limit) {
 
 loadPokemonItens(offset, limit)
 
-loadMoreButton.addEventListener('click', () => {
-    const qtdPokemonsWithNexPage = offset + limit
+nextButton.addEventListener('click', () => {
+    const qtdPokemonsNextPage = offset + limit
     offset += limit
 
-    if (qtdPokemonsWithNexPage >= maxPokemons) {
+    if (qtdPokemonsNextPage >= maxPokemons) {
         const newLimit = maxPokemons - offset
         loadPokemonItens(offset, newLimit)
 
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
     } else {
         loadPokemonItens(offset, limit)
     }
+
+    previousButton.style.display = 'flex'
+})
+
+previousButton.addEventListener('click', () => {
+    const qtdPokemonsPrevPage = limit - offset 
+    offset -= limit
+
+    if (qtdPokemonsPrevPage < maxPokemons && offset >= 0) {
+        loadPokemonItens(offset, limit)
+    } else {
+        previousButton.style.display = 'none'
+    }
+
 })
 
 function convertPokemonToFavoriteLi(pokemon) {

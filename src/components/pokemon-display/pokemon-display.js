@@ -10,6 +10,9 @@ const pokemonImg = document.querySelector('.choose-pokemon__img')
 
 const form = document.querySelector('.choose-pokemon__form')
 const input = document.querySelector('.choose-pokemon__search')
+const buttonPrev = document.getElementById('buttonPrev')
+const buttonNext = document.getElementById('buttonNext')
+
 let searchPokemon = 1;
 
 const renderPokemon = async (pokemon) => {
@@ -44,6 +47,18 @@ const renderPokemon = async (pokemon) => {
 form.addEventListener('submit', (search) => {
     search.preventDefault();
     input.value > maxPokemons || input.value == ' ' ? input.value = '' : renderPokemon(input.value.toLowerCase());
+});
+
+buttonPrev.addEventListener('click', () => {
+    if (searchPokemon > 1) {
+        searchPokemon -= 1
+        renderPokemon(searchPokemon)
+    }
+});
+
+buttonNext.addEventListener('click', () => {
+    searchPokemon += 1
+    renderPokemon(searchPokemon)
 });
 
 renderPokemon(searchPokemon)
