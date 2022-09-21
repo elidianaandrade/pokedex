@@ -20,7 +20,7 @@ const renderPokemon = async (pokemon) => {
 
     if(pokemonData) {
         pokemonName.innerHTML = pokemonData.name
-        pokemonNumber.innerHTML = `#${pokemonData.id}`
+        pokemonNumber.innerHTML = `#${("000" + pokemonData.id).slice(-3)} `
         pokemonTypes.innerHTML = pokemonData.types.map((typeSlot) => typeSlot.type.name).join(', ')
         pokemonAbilities.innerHTML = pokemonData.abilities.map((abilitiesSlot) => abilitiesSlot.ability.name).join(', ')
         pokemonWeight.innerHTML = `${pokemonData.weight / 10} kg`

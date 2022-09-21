@@ -41,6 +41,8 @@ html {
 
 * {
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-background-color) transparent;
 }
 
 body {

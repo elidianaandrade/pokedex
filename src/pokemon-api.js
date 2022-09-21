@@ -2,7 +2,7 @@ const pokeApi = {}
 
 function convertPokeApiDetailToPokemon(pokeDetails) {
     const pokemon = new Pokemon()
-    pokemon.id = pokeDetails.id
+    pokemon.id = ("000" + pokeDetails.id).slice(-3)
     pokemon.name = pokeDetails.name
 
     const types = pokeDetails.types.map((typeSlot) => typeSlot.type.name)

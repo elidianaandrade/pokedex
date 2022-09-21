@@ -40,15 +40,23 @@ function convertPokemonToLi(pokemon) {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="modal-body__content1">
-                            <img class="pokemon__img" 
+                        <div class="modal-body__content1 ">
+                            <div class="pokemon__cover ${ pokemon.types.find((type) => `${ type }`)}">
+                                <img class="pokemon__img" 
                                 src="${ pokemon.img }" 
                                 alt="Pokémon ${ pokemon.name }">
+                            </div>
                         </div>
                         <div class="modal-body__content2">
                             <ol class="types-list">
                                 ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
                             </ol>
+                            <div class="abilities">
+                                <span class="choose-pokemon__subtitle">Abilites: </span>
+                                <ol class="abilities-list">
+                                    ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(', ') }
+                                </ol>
+                            </div>
                             <div class="choose-pokemon__details">
                                 <div class="choose-pokemon__dimensions">
                                     <div class="content1">
@@ -98,8 +106,8 @@ function loadPokemonItens(offset, limit) {
 loadPokemonItens(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
-    offset += limit
     const qtdPokemonsWithNexPage = offset + limit
+    offset += limit
 
     if (qtdPokemonsWithNexPage >= maxPokemons) {
         const newLimit = maxPokemons - offset
