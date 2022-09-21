@@ -61,11 +61,11 @@ function convertPokemonToLi(pokemon) {
                             <div class="choose-pokemon__details">
                                 <div class="choose-pokemon__dimensions">
                                     <div class="content1">
-                                        <span class="choose-pokemon__weight">${ pokemon.weight }</span>
+                                        <span class="choose-pokemon__weight">${ pokemon.weight } kg</span>
                                         <span class="choose-pokemon__subtitle">Weight</span>
                                     </div>
                                     <div class="content2">         
-                                        <span class="choose-pokemon__height">${ pokemon.height }</span>
+                                        <span class="choose-pokemon__height">${ pokemon.height } m</span>
                                         <span class="choose-pokemon__subtitle">Height</span>
                                     </div>
                                 </div>
@@ -125,12 +125,11 @@ previousButton.addEventListener('click', () => {
     const qtdPokemonsPrevPage = limit - offset 
     offset -= limit
 
-    if (qtdPokemonsPrevPage < maxPokemons && offset >= 0) {
+    if (qtdPokemonsPrevPage <= maxPokemons && offset >= 0) {
         loadPokemonItens(offset, limit)
     } else {
         previousButton.style.display = 'none'
     }
-
 })
 
 function convertPokemonToFavoriteLi(pokemon) {
@@ -151,6 +150,12 @@ function convertPokemonToFavoriteLi(pokemon) {
                 <ol class="types-list">
                     ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
                 </ol>
+                <div class="abilities">
+                    <span class="choose-pokemon__subtitle">Abilities: </span>
+                    <ol class="abilities-list">
+                        ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(' ') }
+                    </ol>
+                </div>
                 <div class="choose-pokemon__details">
                     <div class="choose-pokemon__dimensions">
                         <div class="content1">

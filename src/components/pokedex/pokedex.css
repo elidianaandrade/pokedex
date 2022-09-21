@@ -389,7 +389,7 @@
     width: 100%;
 }
 
-.modal-body__content2 .abilities {
+.abilities {
     display: flex;
     flex-direction: row;
     justify-content: center;
