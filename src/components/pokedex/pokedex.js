@@ -80,7 +80,7 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
-function loadPokemonItens(offset, limit) {
+function renderPokemonItens(offset, limit) {
     pokedexListLength.innerHTML = maxPokemons
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -104,31 +104,37 @@ function loadPokemonItens(offset, limit) {
     })
 }
 
-loadPokemonItens(offset, limit)
+renderPokemonItens(offset, limit)
 
 nextButton.addEventListener('click', () => {
-    const qtdPokemonsNextPage = offset + limit
     offset += limit
 
-    if (qtdPokemonsNextPage >= maxPokemons) {
-        const newLimit = maxPokemons - offset
-        loadPokemonItens(offset, newLimit)
+    if (offset >= maxPokemons || offset == maxPokemons - limit) {
+        const newOffset = maxPokemons - limit
+        renderPokemonItens(newOffset, limit)
 
+        nextButton.style.display = 'none'
     } else {
-        loadPokemonItens(offset, limit)
-    }
+        renderPokemonItens(offset, limit)
 
-    previousButton.style.display = 'flex'
+        nextButton.style.display = 'flex'
+        previousButton.style.display = 'flex'
+    }
 })
 
 previousButton.addEventListener('click', () => {
-    const qtdPokemonsPrevPage = limit - offset 
     offset -= limit
 
-    if (qtdPokemonsPrevPage <= maxPokemons && offset >= 0) {
-        loadPokemonItens(offset, limit)
-    } else {
+    if (offset <= 0 || offset > maxPokemons) {
+        const newOffset = 0
+        renderPokemonItens(newOffset, limit) 
+
         previousButton.style.display = 'none'
+    } else {
+        renderPokemonItens(offset, limit) 
+        
+        nextButton.style.display = 'flex'
+        previousButton.style.display = 'flex'
     }
 })
 
@@ -182,6 +188,12 @@ function removeFromFavorite(pokemon) {
     pokemonWishlist = [...pokemonWishlist.filter(p => p.id != pokemon.id)]
     renderWishlist()
 }
+
+// function checkIfIncludedInWishlist(pokemon) {
+//     return pokemonWishlist.some(p =>
+//         p.id == pokemon.id
+//     )
+// }
 
 function renderWishlist() {
     const newPokemonHtml =  pokemonWishlist.map(convertPokemonToFavoriteLi).join('')
