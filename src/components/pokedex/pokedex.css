@@ -415,6 +415,12 @@
 }
 
 .modal-body__content2 .choose-pokemon__dimensions,
+.pokemon-favorited .pokemon__img:hover {
+    transform: scale(1);
+    cursor: auto;
+}
+
+.modal-body__content2 .choose-pokemon__dimensions,
 .pokemon-favorited .choose-pokemon__dimensions {
     justify-content: center !important;
 }
