@@ -162,89 +162,174 @@
 }
 
 .types-list .type {
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.025rem;
-    color: var(--gray-100);
-    text-align: center;
-    border-radius: 25rem;
-    padding: 0.4rem 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50rem;
     filter: brightness(1.1);
     user-select: none;
-    text-shadow: 0.05rem 0.05rem 0.1rem var(--primary-background-color);
 }
 
 /* Types Colors Style */
 .normal {
-    background: var(--normal);
+    background: url('./../../assets/images/types/normal.png') center no-repeat, var(--normal);
+    background-size: contain;
+}
+
+.pokemon__cover.normal {
+    background: var(--normal) !important;
 }
 
 .grass {
-    background: var(--grass);
+    background: url('./../../assets/images/types/grass.png') center no-repeat, var(--grass);
+    background-size: contain;
+}
+
+.pokemon__cover.grass {
+    background: var(--grass) !important;
 }
 
 .fire {
-    background: var(--fire);
+    background: url('./../../assets/images/types/fire.png') center no-repeat, var(--fire);
+    background-size: contain;
+}
+
+.pokemon__cover.fire {
+    background: var(--fire) !important;
 }
 
 .water {
-    background: var(--water);
+    background: url('./../../assets/images/types/water.png') center no-repeat, var(--water);
+    background-size: contain;
+}
+
+.pokemon__cover.water {
+    background: var(--water) !important;
 }
 
 .electric {
-    background: var(--electric);
+    background: url('./../../assets/images/types/electric.png') center no-repeat, var(--electric);
+    background-size: contain;
+}
+
+.pokemon__cover.electric {
+    background: var(--electric) !important;
 }
 
 .ice {
-    background: var(--ice);
+    background: url('./../../assets/images/types/ice.png') center no-repeat, var(--ice);
+    background-size: contain;
+}
+
+.pokemon__cover.ice {
+    background: var(--ice) !important;
 }
 
 .ground {
-    background: var(--ground);
+    background: url('./../../assets/images/types/ground.png') center no-repeat, var(--ground);
+    background-size: contain;
+}
+
+.pokemon__cover.ground {
+    background: var(--ground) !important;
 }
 
 .flying {
-    background: var(--flying);
+    background: url('./../../assets/images/types/flying.png') center no-repeat, var(--flying);
+    background-size: contain;
+}
+
+.pokemon__cover.flying {
+    background: var(--flying) !important;
 }
 
 .poison {
-    background: var(--poison);
+    background: url('./../../assets/images/types/poison.png') center no-repeat, var(--poison);
+    background-size: contain;
+}
+
+.pokemon__cover.poison {
+    background: var(--poison) !important;
 }
 
 .fighting {
-    background:  var(--fighting);
+    background: url('./../../assets/images/types/fighting.png') center no-repeat, var(--fighting);
+    background-size: contain;
+}
+
+.pokemon__cover.fighting {
+    background: var(--fighting) !important;
 }
 
 .psychic {
-    background:  var(--psychic);
+    background: url('./../../assets/images/types/psychic.png') center no-repeat, var(--psychic);
+    background-size: contain;
+}
+
+.pokemon__cover.psychic {
+    background: var(--psychic) !important;
 }
 
 .dark {
-    background: var(--dark);
+    background: url('./../../assets/images/types/dark.png') center no-repeat, var(--dark);
+    background-size: contain;
+}
+
+.pokemon__cover.dark {
+    background: var(--dark) !important;
 }
 
 .rock {
-    background: var(--rock);
+    background: url('./../../assets/images/types/rock.png') center no-repeat, var(--rock);
+    background-size: contain;
+}
+
+.pokemon__cover.rock {
+    background: var(--rock) !important;
 }
 
 .bug {
-    background: var(--bug);
+    background: url('./../../assets/images/types/bug.png') center no-repeat, var(--bug);
+    background-size: contain;
+}
+
+.pokemon__cover.bug {
+    background: var(--bug) !important;
 }
 
 .ghost {
-    background: var(--ghost);
+    background: url('./../../assets/images/types/ghost.png') center no-repeat, var(--ghost);
+    background-size: contain;
+}
+
+.pokemon__cover.ghost {
+    background: var(--ghost) !important;
 }
 
 .steel {
-    background: var(--steel);
+    background: url('./../../assets/images/types/steel.png') center no-repeat, var(--steel);
+    background-size: contain;
+}
+
+.pokemon__cover.steel {
+    background: var(--steel) !important;
 }
 
 .dragon {
-    background: var(--dragon);
+    background: url('./../../assets/images/types/dragon.png') center no-repeat, var(--dragon);
+    background-size: contain;
+}
+
+.pokemon__cover.dragon {
+    background: var(--dragon) !important;
 }
 
 .fairy {
-    background: var(--fairy);
+    background: url('./../../assets/images/types/fairy.png') center no-repeat, var(--fairy);
+    background-size: contain;
+}
+
+.pokemon__cover.fairy {
+    background: var(--fairy) !important;
 }
 /* Types Colors Style End */
 

@@ -27,7 +27,7 @@ function convertPokemonToLi(pokemon) {
                     <span class="pokemon__number"> #${ pokemon.id }</span>
                 </span>
                 <ol class="types-list">
-                    ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
+                    ${ pokemon.types.map((type) => `<li title="${ type }" class="type ${ type }"></li>`).join('') }
                 </ol>
             </div>
             <div id="modalPokemon${pokemon.id}" class="modal">
@@ -52,7 +52,7 @@ function convertPokemonToLi(pokemon) {
                         <div class="modal-body__content2">
 
                             <ol class="types-list">
-                                ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
+                                ${ pokemon.types.map((type) => `<li title="${ type }" class="type ${ type }"></li>`).join('') }
                             </ol>
                             <div class="abilities">
                                 <span class="choose-pokemon__subtitle">Abilites: </span>
@@ -167,7 +167,7 @@ function convertPokemonToFavoriteLi(pokemon) {
                     <span class="pokemon__number"> #${ pokemon.id }</span>
                 </span>
                 <ol class="types-list">
-                    ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
+                    ${ pokemon.types.map((type) => `<li title="${ type }" class="type ${ type }"></li>`).join('') }
                 </ol>
                 <div class="abilities">
                     <span class="choose-pokemon__subtitle">Abilities: </span>

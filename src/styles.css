@@ -21,8 +21,8 @@
     --water: linear-gradient(to left, #00d2ff, #3a7bd5);
     --electric: linear-gradient(to right, #e6a900, #f9d423);
     --ice: linear-gradient(to right, #9cecfb, #65c7f7, #418aff);
-    --ground: #dfbf69;
-    --flying: #a98ff0;
+    --ground:  linear-gradient(to right, #ee570c, #ddb955) ;
+    --flying: linear-gradient(to right, #427fe0, #8AACE4);
     --poison: linear-gradient(to right, #6a3093, #a044ff);
     --fighting: linear-gradient(to right, #e52d27, #b31217); 
     --psychic: linear-gradient(to right, #7f00ff, #e100ff);
@@ -30,9 +30,9 @@
     --rock: #b8a137;
     --bug: linear-gradient(to right, #3ca55c, #b5ac49);
     --ghost: #6e5896;
-    --steel: #b9b7cf;
-    --dragon: #6f38f6;
-    --fairy: linear-gradient(to right, #eb8996, #ffb6bf);
+    --steel: linear-gradient(to right, #2D3037, #8B8B8B);
+    --dragon: linear-gradient(to right, #06589b, #006FCA);
+    --fairy: linear-gradient(to right, #e661d4, #f87de8);
 }
 
 html {
