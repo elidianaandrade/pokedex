@@ -94,8 +94,13 @@ function renderPokemonItens(offset, limit) {
             const modalPokemon = document.getElementById(`modalPokemon${pokemon.id}`)
 
             favoriteButton.addEventListener('click', () => {
-                favoriteButton.classList.toggle('active')
-                favoriteButton.classList.contains('active') ? addToFavorite(pokemon) : removeFromFavorite(pokemon)
+                if (checkIfIncludedInWishlist(pokemon)) {
+                    removeFromFavorite(pokemon)
+                    favoriteButton.classList.remove('active')
+                } else {
+                    addToFavorite(pokemon)
+                    favoriteButton.classList.add('active')
+                }
             })
 
             openModal.addEventListener('click', () => modalPokemon.classList.add('active'))
@@ -189,11 +194,11 @@ function removeFromFavorite(pokemon) {
     renderWishlist()
 }
 
-// function checkIfIncludedInWishlist(pokemon) {
-//     return pokemonWishlist.some(p =>
-//         p.id == pokemon.id
-//     )
-// }
+function checkIfIncludedInWishlist(pokemon) {
+     return pokemonWishlist.some(p =>
+         p.id == pokemon.id
+     )
+}
 
 function renderWishlist() {
     const newPokemonHtml =  pokemonWishlist.map(convertPokemonToFavoriteLi).join('')
