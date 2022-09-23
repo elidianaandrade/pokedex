@@ -57,6 +57,7 @@
 
 .sidebar .menu__item {
     width: 100%;
+    padding: 0.5rem 1rem;
 }
 
 .sidebar .menu__item .menu__link {
