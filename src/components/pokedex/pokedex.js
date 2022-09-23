@@ -55,7 +55,7 @@ function convertPokemonToLi(pokemon) {
                             <div class="abilities">
                                 <span class="choose-pokemon__subtitle">Abilites: </span>
                                 <ol class="abilities-list">
-                                    ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(' ') }
+                                    ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(', ') }
                                 </ol>
                             </div>
                             <div class="choose-pokemon__details">
@@ -166,7 +166,7 @@ function convertPokemonToFavoriteLi(pokemon) {
                 <div class="abilities">
                     <span class="choose-pokemon__subtitle">Abilities: </span>
                     <ol class="abilities-list">
-                        ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(' ') }
+                        ${ pokemon.abilities.map((ability) => `<li class="abilities-list__item ${ ability }"> ${ ability }</li>`).join(', ') }
                     </ol>
                 </div>
                 <div class="choose-pokemon__details">
