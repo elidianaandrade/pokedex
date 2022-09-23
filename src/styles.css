@@ -141,7 +141,7 @@ header {
 .bi-record-circle::after{
     position: absolute;
     content: '';
-    width: 1.4rem;
+    width: 1.35rem;
     height: 0.14rem;
     margin: 0.68rem 0 0 -1.4rem;
     background: var(--gray-100);
