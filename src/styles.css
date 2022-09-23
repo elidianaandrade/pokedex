@@ -244,6 +244,13 @@ footer a {
     footer {
         margin-bottom: 4rem;
     }
+
+    .bi-heart-fill:hover, .bi-heart-fill.active {
+        -webkit-text-stroke-width: 0.085rem !important;
+        -webkit-text-stroke-color: var(--white) !important;
+        color: transparent !important;
+        cursor: pointer !important;    
+    }
 }
 
 
