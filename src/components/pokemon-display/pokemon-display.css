@@ -162,7 +162,6 @@ main .title {
     height: 9.5rem;
     transition: 0.4s;
     cursor: pointer;
-    margin-bottom: 0.25rem;
     user-select: none;
 }
 
