@@ -478,6 +478,14 @@
     background: var(--primary-color);
 }
 
+
+.pokemon-favorited .choose-pokemon__hp,
+.pokemon-favorited .choose-pokemon__weight,
+.pokemon-favorited .choose-pokemon__height {
+    font-size: 1rem;
+    text-transform: lowercase !important;
+}
+
 /* FAVORITES STYLE END */
 
 

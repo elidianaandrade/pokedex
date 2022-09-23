@@ -17,6 +17,9 @@ function convertPokeApiDetailToPokemon(pokeDetails) {
     pokemon.abilities = abilities
     pokemon.ability = ability
 
+    pokemon.hp = Math.floor((pokeDetails.stats[0].base_stat * Math.random()) + 1)
+    pokemon.maxHp = pokeDetails.stats[0].base_stat
+
     pokemon.img = pokeDetails.sprites.other.dream_world.front_default
 
     pokemon.weight = pokeDetails.weight / 10

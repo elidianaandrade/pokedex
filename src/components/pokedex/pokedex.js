@@ -40,6 +40,7 @@ function convertPokemonToLi(pokemon) {
                             <i class="bi bi-x-lg"></i>
                         </button>
                     </div>
+                    
                     <div class="modal-body">
                         <div class="modal-body__content1 ">
                             <div class="pokemon__cover ${ pokemon.types.find((type) => `${ type }`)}">
@@ -49,6 +50,7 @@ function convertPokemonToLi(pokemon) {
                             </div>
                         </div>
                         <div class="modal-body__content2">
+
                             <ol class="types-list">
                                 ${ pokemon.types.map((type) => `<li class="type ${ type }">${ type }</li>`).join('') }
                             </ol>
@@ -61,10 +63,14 @@ function convertPokemonToLi(pokemon) {
                             <div class="choose-pokemon__details">
                                 <div class="choose-pokemon__dimensions">
                                     <div class="content1">
+                                        <span class="choose-pokemon__hp">${pokemon.maxHp} / ${pokemon.maxHp}</span>
+                                        <span class="choose-pokemon__subtitle">HP</span>
+                                    </div>
+                                    <div class="content2">
                                         <span class="choose-pokemon__weight">${ pokemon.weight } kg</span>
                                         <span class="choose-pokemon__subtitle">Weight</span>
                                     </div>
-                                    <div class="content2">         
+                                    <div class="content3">         
                                         <span class="choose-pokemon__height">${ pokemon.height } m</span>
                                         <span class="choose-pokemon__subtitle">Height</span>
                                     </div>
@@ -172,11 +178,15 @@ function convertPokemonToFavoriteLi(pokemon) {
                 <div class="choose-pokemon__details">
                     <div class="choose-pokemon__dimensions">
                         <div class="content1">
-                            <span class="choose-pokemon__weight">${ pokemon.weight }</span>
+                            <span class="choose-pokemon__hp">${pokemon.maxHp} / ${pokemon.maxHp}</span>
+                            <span class="choose-pokemon__subtitle">HP</span>
+                        </div>
+                        <div class="content2">
+                            <span class="choose-pokemon__weight">${ pokemon.weight } kg</span>
                             <span class="choose-pokemon__subtitle">Weight</span>
                         </div>
-                        <div class="content2">         
-                            <span class="choose-pokemon__height">${ pokemon.height }</span>
+                        <div class="content3">         
+                            <span class="choose-pokemon__height">${ pokemon.height } m</span>
                             <span class="choose-pokemon__subtitle">Height</span>
                         </div>
                     </div>

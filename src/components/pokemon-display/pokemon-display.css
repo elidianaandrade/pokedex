@@ -98,7 +98,7 @@ main .title {
 
 .choose-pokemon__dimensions {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 1rem;
     padding: 0;
     margin: 0;
@@ -122,6 +122,7 @@ main .title {
     margin: 0;
 }
 
+.choose-pokemon__hp,
 .choose-pokemon__weight,
 .choose-pokemon__height {
     font-size: 1.25rem;

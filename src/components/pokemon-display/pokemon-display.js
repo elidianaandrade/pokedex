@@ -3,6 +3,7 @@ const pokemonName = document.querySelector('.choose-pokemon__name')
 const pokemonNumber = document.querySelector('.choose-pokemon__number')
 const pokemonTypes = document.querySelector('.choose-pokemon__types')
 const pokemonAbilities = document.querySelector('.choose-pokemon__abilities')
+const pokemonHp = document.querySelector('.choose-pokemon__hp')
 const pokemonWeight = document.querySelector('.choose-pokemon__weight')
 const pokemonHeight = document.querySelector('.choose-pokemon__height')
 
@@ -26,6 +27,7 @@ const renderPokemon = async (pokemon) => {
         pokemonNumber.innerHTML = `#${("000" + pokemonData.id).slice(-3)} `
         pokemonTypes.innerHTML = pokemonData.types.map((typeSlot) => typeSlot.type.name).join(', ')
         pokemonAbilities.innerHTML = pokemonData.abilities.map((abilitiesSlot) => abilitiesSlot.ability.name).join(', ')
+        pokemonHp.innerHTML = `${pokemonData.stats[0].base_stat} / ${pokemonData.stats[0].base_stat}`
         pokemonWeight.innerHTML = `${pokemonData.weight / 10} kg`
         pokemonHeight.innerHTML = `${pokemonData.height / 10} m`
         pokemonImg.src = pokemonData.sprites.other.dream_world.front_default
