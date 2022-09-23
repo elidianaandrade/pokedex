@@ -33,14 +33,18 @@ function convertPokemonToLi(pokemon) {
             <div id="modalPokemon${pokemon.id}" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <span class="pokemon__name">${ pokemon.name } 
-                            <span class="pokemon__number"> #${ pokemon.id }</span>
-                        </span>
+                        <div class="modal-title">
+                            <span class="pokemon__name">${ pokemon.name }
+                                <span class="pokemon__number"> #${ pokemon.id }</span>
+                            </span>
+                            <ol class="types-list">
+                                ${ pokemon.types.map((type) => `<li title="${ type }" class="type ${ type }"></li>`).join('') }
+                            </ol>
+                        </div>
                         <button id="closeModal${pokemon.id}" class="close-modal">                        
                             <i class="bi bi-x-lg"></i>
                         </button>
                     </div>
-                    
                     <div class="modal-body">
                         <div class="modal-body__content1 ">
                             <div class="pokemon__cover ${ pokemon.types.find((type) => `${ type }`)}">
@@ -50,10 +54,6 @@ function convertPokemonToLi(pokemon) {
                             </div>
                         </div>
                         <div class="modal-body__content2">
-
-                            <ol class="types-list">
-                                ${ pokemon.types.map((type) => `<li title="${ type }" class="type ${ type }"></li>`).join('') }
-                            </ol>
                             <div class="abilities">
                                 <span class="choose-pokemon__subtitle">Abilites: </span>
                                 <ol class="abilities-list">
