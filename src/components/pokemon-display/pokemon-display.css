@@ -162,6 +162,7 @@ main .title {
     transition: 0.4s;
     cursor: pointer;
     margin-bottom: 0.25rem;
+    user-select: none;
 }
 
 .choose-pokemon__img:hover {
