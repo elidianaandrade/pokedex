@@ -93,6 +93,8 @@ function renderPokemonItens(offset, limit) {
             const closeModal = document.getElementById(`closeModal${pokemon.id}`)
             const modalPokemon = document.getElementById(`modalPokemon${pokemon.id}`)
 
+            checkIfIncludedInWishlist(pokemon) ? favoriteButton.classList.add('active') : favoriteButton.classList.remove('active')
+
             favoriteButton.addEventListener('click', () => {
                 if (checkIfIncludedInWishlist(pokemon)) {
                     removeFromFavorite(pokemon)
