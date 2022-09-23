@@ -88,15 +88,19 @@
 }
 
 .bi-heart-fill {
-    -webkit-text-stroke-width: 0.085rem !important;
-    -webkit-text-stroke-color: var(--white) !important;
-    color: transparent !important;
-    cursor: pointer !important;
+    -webkit-text-stroke-width: 0.085rem;
+    -webkit-text-stroke-color: var(--white);
+    color: transparent;
+    cursor: pointer;
 }
 
 .bi-heart-fill:hover, .bi-heart-fill.active {
-    -webkit-text-stroke-color: var(--primary-color) !important;
-    color: var(--primary-color) !important;
+    -webkit-text-stroke-color: var(--primary-color);
+}
+
+.bi-heart-fill.active {
+    -webkit-text-stroke-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .pokemon__img {
