@@ -224,6 +224,15 @@ footer a {
     display: none;
 }
 
+#buttonUp {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem 1rem 1.25rem;
+    cursor: pointer;
+}
+
 /* Breakpoints */
 @media screen and (max-width: 576px) {
     main {
