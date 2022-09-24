@@ -505,6 +505,7 @@
     color: var(--primary-color);
 }
 
+.modal-body .pokemon__img,
 .modal-body__content2 .choose-pokemon__dimensions,
 .pokemon-favorited .pokemon__img:hover {
     transform: scale(1);
