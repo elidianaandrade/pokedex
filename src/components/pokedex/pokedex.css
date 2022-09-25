@@ -97,8 +97,10 @@
 }
 
 .all {
+    width: 3.7rem !important;
+    font-size: 1rem;
     color: var(--white);
-    padding: 0.25rem 0;
+    padding: 0.25rem 0.1rem;
 }
 
 .all:hover {

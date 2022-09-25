@@ -7,7 +7,9 @@ const nextButton = document.getElementById('nextButton')
 const pokemonListFavorites = document.getElementById('pokemonListFavorites')
 const pokemonListFavoritesLength = document.getElementById('pokemonListFavoritesLength')
 
+const menuTypes = document.getElementById('menuTypes')
 const buttonDrop = document.getElementById('buttonDrop')
+const pokemonType = document.querySelectorAll('.type')
 
 let pokemonWishlist = []
 
@@ -17,8 +19,13 @@ let offset = 0
 
 
 buttonDrop.addEventListener('click', () => {
-    const menuTypes = document.getElementById('menuTypes')
     menuTypes.classList.toggle('active')
+})
+
+pokemonType.forEach(type => {
+    type.addEventListener('click', () => {
+        menuTypes.classList.remove('active')
+    }) 
 })
 
 function convertPokemonToLi(pokemon) {
@@ -97,12 +104,12 @@ function convertPokemonToLi(pokemon) {
 }
 
 function renderPokemonItens(offset, limit) {
-    pokedexListLength.innerHTML = maxPokemons
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const pokemonListHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML = pokemonListHtml
-
+        pokedexListLength.innerHTML = maxPokemons
+        
         pokemons.forEach(pokemon => {
             const openModal = document.getElementById(`openModal${pokemon.id}`)
             const closeModal = document.getElementById(`closeModal${pokemon.id}`)

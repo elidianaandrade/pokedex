@@ -2,7 +2,7 @@
 const menuItems = document.querySelectorAll('.menu__item');
 
 menuItems.forEach(item => {
-  item.addEventListener("click", function() {   
+  item.addEventListener("click", () => {   
     menuItems.forEach(a=>{
       a.classList.remove("active");
     });
@@ -12,8 +12,9 @@ menuItems.forEach(item => {
 /* MENU ITEM END */ 
 
 /* BUTTON UP */
+const buttonUp = document.getElementById('buttonUp'); 
+
 function showButtonUp () {
-  const buttonUp = document.getElementById('buttonUp'); 
   if (window.scrollY > 100) {
     buttonUp.style.display = 'block';
   }   else {
