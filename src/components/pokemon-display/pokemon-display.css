@@ -11,6 +11,7 @@ main .subheading {
 main .title {
     font-size: 2rem;
     color: var(--white);
+    padding: 1.5rem 0 0.5rem;
 }
 
 #choosePokemon {
@@ -180,22 +181,6 @@ main .title {
     gap: 0.5rem;
     margin: 0 1rem 1rem;
     z-index: 2;
-}
-
-.choose-pokemon__button {
-    cursor: pointer;
-    font-size: 1rem;
-    color: var(--white);
-    user-select: none;
-    padding: 0.5rem 0.5rem 0.4rem;
-    background-color: var(--secondary-background-color);
-    box-shadow: 0.05rem 0.05rem 0.2rem var(--primary-background-color);
-    border-radius: 1rem;
-}
-
-.choose-pokemon__button:hover {
-    color: var(--primary-color);
-    box-shadow: inset 0.1rem 0.1rem 0.1rem var(--primary-background-color);
 }
 
 @media screen and (max-width: 768px) {

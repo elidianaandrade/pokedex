@@ -64,10 +64,19 @@ a:hover {
     color: var(--primary-color) !important;
 }
 
-h2 {
-    font-size: 1.5rem;
+.title-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 0.1rem solid var(--secondary-background-color);
-    padding-bottom: 1rem;
+    margin: 1rem 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0 0 1rem;
 }
 
 /* SCROLLBAR STYLE */
@@ -156,8 +165,28 @@ header {
 }
 /* MENU STYLE END */
 
+/* BUTTON CIRCULAR STYLE */
+
+.button-circular {
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--white);
+    user-select: none;
+    padding: 0.5rem 0.5rem 0.4rem;
+    background-color: var(--secondary-background-color);
+    box-shadow: 0.05rem 0.05rem 0.2rem var(--primary-background-color);
+    border-radius: 1rem;
+}
+
+.button-circular:hover {
+    color: var(--primary-color);
+    box-shadow: inset 0.1rem 0.1rem 0.1rem var(--primary-background-color);
+}
+
+/* BUTTON CIRCULAR STYLE END */
+
 #favorites {
-    margin: 1.5rem 3rem 0 2.5rem;
+    padding: 1.5rem 3rem 0 2.5rem;
 }
 
 footer {

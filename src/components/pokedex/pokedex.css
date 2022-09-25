@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    margin: 1.5rem 3rem 0 2.5rem;
+    padding: 1.5rem 3rem 0 2.5rem;
 }
 
 .pokemons-length {
@@ -367,7 +367,7 @@
     box-shadow: inset 0 0 0.4rem var(--secondary-background-color);
 }
 
-.pagination button:hover .choose-pokemon__button {
+.pagination button:hover .button-circular {
     color: var(--primary-color);
     box-shadow: inset 0 0 0.4rem var(--secondary-background-color) !important;
 }

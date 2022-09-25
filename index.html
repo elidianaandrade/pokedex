@@ -106,15 +106,18 @@
                 <div class="choose-pokemon__cover">
                     <img class="choose-pokemon__img" src="" alt="">
                     <div class="choose-pokemon__buttons">
-                      <button id="buttonPrev" class="choose-pokemon__button bi bi-caret-left-fill"></button>  
-                      <button id="buttonNext" class="choose-pokemon__button bi bi-caret-right-fill"></button>  
+                      <button id="buttonPrev" class="button-circular bi bi-caret-left-fill"></button>  
+                      <button id="buttonNext" class="button-circular bi bi-caret-right-fill"></button>  
                     </div>
                 </div>
             </div>  
         </div>
     </main>
     <section id="pokedex">
-        <h2>Pokédex</h2>
+        <div class="title-container">
+            <h2 class="title">Pokédex</h2>
+        </div>
+
         <div class="pokemons-filter">
             <div class="pokemons-length">
                 <img src="src/assets/images/pokeball.png" alt="Pokeball">
@@ -125,17 +128,19 @@
         <ol id="pokemonsList" class="pokemons-list"></ol>
         <div class="pagination">
             <button id="previousButton" type="button">
-                <i class="choose-pokemon__button bi bi-caret-left-fill"></i>  
+                <i class="button-circular bi bi-caret-left-fill"></i>  
                 <span>Prev</span>
             </button>
             <button id="nextButton" type="button">
                 <span>Next</span>
-                <i class="choose-pokemon__button bi bi-caret-right-fill"></i> 
+                <i class="button-circular bi bi-caret-right-fill"></i> 
             </button>
         </div>
     </section>
     <section id="favorites">
-        <h2>Favorites</h2>
+        <div class="title-container">
+            <h2 class="title">Favorites</h2>
+        </div>
         <div class="pokemons-length">
             <img src="src/assets/images/pokeball.png" alt="Pokeball">
             <span id="pokemonListFavoritesLength">0</span>
@@ -170,7 +175,7 @@
             <a href="https://github.com/elidianaandrade" target="_blank">EA</a>. 
         </span>
         <a href="#top">
-            <button id="buttonUp" title="Up" class="choose-pokemon__button bi bi-caret-up-fill"></button>  
+            <button id="buttonUp" title="Up" class="button-circular bi bi-caret-up-fill"></button>  
         </a>
     </footer>
     <noscript>
