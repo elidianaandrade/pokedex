@@ -6,6 +6,107 @@
     padding: 1.5rem 3rem 0 2.5rem;
 }
 
+.menu-types {
+    width: 10rem;
+    z-index: 3;
+    box-shadow: 0.1rem 0.1rem 0.4rem var(--shadow-color);
+    user-select: none;
+}
+
+.menu-types .button-drop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border: 0.1rem solid var(--secondary-background-color);
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-drop:hover {
+    background-color: var(--secondary-background-color);
+}
+ 
+.menu-types.active .button-drop {
+    background-color: var(--secondary-background-color);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.menu-types.active .button-drop i {
+    transform: scaleY(-1);
+    transition: 0.4s;
+}
+
+.button-drop span,
+.button-drop i {
+    font-size: 1rem;
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.menu-types__content {
+    display: none;
+    transition: 0.5s;
+}
+
+.menu-types.active .menu-types__content {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 10rem;
+    height: 12rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    background: var(--primary-background-color);
+    border: 0.1rem solid var(--secondary-background-color);
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: inset 0.1rem 0.1rem 0.4rem var(--shadow-color);
+    transition: 0.5s;
+}
+
+.menu-types__content .types-list {
+    padding: auto;
+    margin: auto;
+    gap: 0.6rem;
+}
+
+.menu-types__content .types-list li {
+    animation: down 0.5s;
+}
+
+@keyframes down {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.menu-types__content .types-list li:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.all {
+    color: var(--white);
+    padding: 0.25rem 0;
+}
+
+.all:hover {
+    color: var(--primary-color);
+    opacity: 100% !important;
+}
+
+
 .pokemons-length {
     display: flex;
     flex-direction: row;
@@ -354,22 +455,6 @@
     border-radius: 50rem;
     cursor: pointer;
     padding: 0.3rem;
-}
-
-.pagination button span {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--gray-600);
-    margin: 0 0.5rem;
-}
-
-.pagination button:hover {
-    box-shadow: inset 0 0 0.4rem var(--secondary-background-color);
-}
-
-.pagination button:hover .button-circular {
-    color: var(--primary-color);
-    box-shadow: inset 0 0 0.4rem var(--secondary-background-color) !important;
 }
 
 #previousButton {

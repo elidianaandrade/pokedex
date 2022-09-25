@@ -116,6 +116,35 @@
     <section id="pokedex">
         <div class="title-container">
             <h2 class="title">Pokédex</h2>
+            <div id="menuTypes" class="menu-types">
+                <button id="buttonDrop" class="button-drop menu-types__button">
+                    <span>Types</span>
+                    <i id="buttonDropIcon" class="bi bi-caret-down-fill"></i>
+                </button>
+                <div class="menu-types__content">
+                    <ol class="types-list">
+                        <li title="normal" class="type normal"></li>
+                        <li title="grass" class="type grass"></li>
+                        <li title="fire" class="type fire"></li>
+                        <li title="water" class="type water"></li>
+                        <li title="electric" class="type electric"></li>
+                        <li title="ice" class="type ice"></li>
+                        <li title="ground" class="type ground"></li>
+                        <li title="flying" class="type flying"></li>
+                        <li title="poison" class="type poison"></li>
+                        <li title="fighting" class="type fighting"></li>
+                        <li title="psychic" class="type psychic"></li>
+                        <li title="dark" class="type dark"></li>
+                        <li title="rock" class="type rock"></li>
+                        <li title="bug" class="type bug"></li>
+                        <li title="ghost" class="type ghost"></li>
+                        <li title="steel" class="type steel"></li>
+                        <li title="dragon" class="type dragon"></li>
+                        <li title="fairy" class="type fairy"></li>
+                    </ol>
+                </div>
+
+            </div>
         </div>
 
         <div class="pokemons-filter">
@@ -127,11 +156,11 @@
 
         <ol id="pokemonsList" class="pokemons-list"></ol>
         <div class="pagination">
-            <button id="previousButton" type="button">
+            <button id="previousButton" type="button" class="button-horizontal">
                 <i class="button-circular bi bi-caret-left-fill"></i>  
                 <span>Prev</span>
             </button>
-            <button id="nextButton" type="button">
+            <button id="nextButton" type="button" class="button-horizontal">
                 <span>Next</span>
                 <i class="button-circular bi bi-caret-right-fill"></i> 
             </button>

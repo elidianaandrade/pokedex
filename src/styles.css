@@ -69,14 +69,15 @@ a:hover {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
     border-bottom: 0.1rem solid var(--secondary-background-color);
     margin: 1rem 0;
 }
 
 .title {
     font-size: 1.5rem;
-    padding: 0;
-    margin: 0 0 1rem;
+    padding: 1rem 0;
+    margin: 0;
 }
 
 /* SCROLLBAR STYLE */
@@ -165,8 +166,7 @@ header {
 }
 /* MENU STYLE END */
 
-/* BUTTON CIRCULAR STYLE */
-
+/* BUTTONS STYLE */
 .button-circular {
     cursor: pointer;
     font-size: 1rem;
@@ -183,7 +183,23 @@ header {
     box-shadow: inset 0.1rem 0.1rem 0.1rem var(--primary-background-color);
 }
 
-/* BUTTON CIRCULAR STYLE END */
+.button-horizontal span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin: 0 0.5rem;
+}
+
+.button-horizontal:hover {
+    box-shadow: inset 0 0 0.4rem var(--secondary-background-color);
+}
+
+.button-horizontal:hover .button-circular {
+    color: var(--primary-color);
+    box-shadow: inset 0 0 0.4rem var(--secondary-background-color) !important;
+}
+
+/* BUTTONS STYLE END */
 
 #favorites {
     padding: 1.5rem 3rem 0 2.5rem;

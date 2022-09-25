@@ -1,15 +1,25 @@
 const pokemonList = document.getElementById('pokemonsList')
 const pokemonListLength = document.getElementById('pokedexListLength')
+
 const previousButton = document.getElementById('previousButton')
 const nextButton = document.getElementById('nextButton')
+
 const pokemonListFavorites = document.getElementById('pokemonListFavorites')
 const pokemonListFavoritesLength = document.getElementById('pokemonListFavoritesLength')
+
+const buttonDrop = document.getElementById('buttonDrop')
 
 let pokemonWishlist = []
 
 const maxPokemons = 648
 const limit = 12
 let offset = 0
+
+
+buttonDrop.addEventListener('click', () => {
+    const menuTypes = document.getElementById('menuTypes')
+    menuTypes.classList.toggle('active')
+})
 
 function convertPokemonToLi(pokemon) {
     return `
@@ -94,10 +104,13 @@ function renderPokemonItens(offset, limit) {
         pokemonList.innerHTML = pokemonListHtml
 
         pokemons.forEach(pokemon => {
-            const favoriteButton = document.getElementById(`favoriteButton${pokemon.id}`)
             const openModal = document.getElementById(`openModal${pokemon.id}`)
             const closeModal = document.getElementById(`closeModal${pokemon.id}`)
             const modalPokemon = document.getElementById(`modalPokemon${pokemon.id}`)
+            const favoriteButton = document.getElementById(`favoriteButton${pokemon.id}`)
+
+            openModal.addEventListener('click', () => modalPokemon.classList.add('active'))
+            closeModal.addEventListener('click', () => modalPokemon.classList.remove('active'))
 
             checkIfIncludedInWishlist(pokemon) ? favoriteButton.classList.add('active') : favoriteButton.classList.remove('active')
 
@@ -110,9 +123,6 @@ function renderPokemonItens(offset, limit) {
                     favoriteButton.classList.add('active')
                 }
             })
-
-            openModal.addEventListener('click', () => modalPokemon.classList.add('active'))
-            closeModal.addEventListener('click', () => modalPokemon.classList.remove('active'))
         })
     })
 }

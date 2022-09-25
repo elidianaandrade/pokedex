@@ -11,7 +11,8 @@ main .subheading {
 main .title {
     font-size: 2rem;
     color: var(--white);
-    padding: 1.5rem 0 0.5rem;
+    padding: 1.5rem 0;
+    margin: 0;
 }
 
 #choosePokemon {
