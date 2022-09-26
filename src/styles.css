@@ -129,7 +129,7 @@ header {
     color: var(--gray-100) !important;
 }
 
-.menu__icon {
+.menu__icon, .bi-record-circle {
     font-size: 1.5rem;
     width: 1.5rem;
     height: 1.5rem;

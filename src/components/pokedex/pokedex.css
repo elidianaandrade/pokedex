@@ -125,6 +125,30 @@
 }
 
 /* POKÉMON LIST STYLE */
+#pokemonsList {
+    text-align: center;
+    width: 92%;
+}
+
+.loading-pokeball {
+    animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0) scale(1.1);
+    }
+    25% {
+        transform: rotate(90deg) scale(1.25);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.35);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.15);
+    }
+}
+
 .pokemons-list {
     display: grid;
     grid-template-columns: repeat(2, 50%);
