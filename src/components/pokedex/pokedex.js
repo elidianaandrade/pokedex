@@ -1,4 +1,4 @@
-const pokemonList = document.getElementById('pokemonsList')
+const pokemonList = document.getElementById('pokemonList')
 const pokemonListLength = document.getElementById('pokedexListLength')
 
 const previousButton = document.getElementById('previousButton')
@@ -9,23 +9,19 @@ const pokemonListFavoritesLength = document.getElementById('pokemonListFavorites
 
 const menuTypes = document.getElementById('menuTypes')
 const buttonDrop = document.getElementById('buttonDrop')
-const pokemonType = document.querySelectorAll('.type')
+const buttonViewAllTypes = document.getElementById('buttonViewAll')
+const buttonsPokemonType = document.querySelectorAll('.type')
 
+let pokemonsType = ''
+let buttonsPokemonTypeActive = false
 let pokemonWishlist = []
 
 const maxPokemons = 648
 const limit = 12
 let offset = 0
 
-
 buttonDrop.addEventListener('click', () => {
     menuTypes.classList.toggle('active')
-})
-
-pokemonType.forEach(type => {
-    type.addEventListener('click', () => {
-        menuTypes.classList.remove('active')
-    }) 
 })
 
 function convertPokemonToLi(pokemon) {
@@ -103,12 +99,58 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
+buttonsPokemonType.forEach(type => {
+    type.addEventListener('click', () => {
+    menuTypes.classList.remove('active')
+    buttonsPokemonType.forEach(li => {
+        li.classList.remove('active')
+        })
+        type.classList.add('active')
+        menuTypes.classList.remove('active')
+
+        pokemonsType = type.title
+        buttonsPokemonTypeActive = true
+
+        pokemonList.innerHTML = `<i title="loading..." class="loading-pokeball bi bi-record-circle"></i>`
+        renderPokemonItens(0, maxPokemons)
+    }) 
+})
+
+buttonViewAllTypes.addEventListener('click', () => {
+    nextButton.style.display = 'flex'
+    buttonsPokemonType.forEach(btnTypes => btnTypes.classList.remove('active')) 
+    menuTypes.classList.remove('active')
+
+    const offsetDefault = 0
+    const limitDefault = 12
+
+    pokemonsType = ''
+    buttonsPokemonTypeActive = false
+    renderPokemonItens(offsetDefault, limitDefault)
+})
+
 function renderPokemonItens(offset, limit) {
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+        pokemonList.innerHTML = `<i title="loading..." class="loading-pokeball bi bi-record-circle"></i>`
+
+        pokedexListLength.innerHTML = maxPokemons
+
+        if(buttonsPokemonTypeActive) {
+            nextButton.style.display = 'none'
+            previousButton.style.display = 'none'
+
+            function getPokemonsByType(types) {
+                pokemons = pokemons.filter(pokemons => types.includes(pokemons.type))
+                return pokemons;
+            }
+
+            getPokemonsByType([`${pokemonsType}`])
+            pokedexListLength.innerHTML = pokemons.length
+        }
+
         const pokemonListHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML = pokemonListHtml
-        pokedexListLength.innerHTML = maxPokemons
         
         pokemons.forEach(pokemon => {
             const openModal = document.getElementById(`openModal${pokemon.id}`)
@@ -139,11 +181,12 @@ renderPokemonItens(offset, limit)
 nextButton.addEventListener('click', () => {
     offset += limit
 
-    if (offset >= maxPokemons || offset == maxPokemons - limit) {
+    if (offset >= maxPokemons || offset == maxPokemons - limit || offset + limit > maxPokemons) {
         const newOffset = maxPokemons - limit
         renderPokemonItens(newOffset, limit)
 
         nextButton.style.display = 'none'
+        previousButton.style.display = 'flex'
     } else {
         renderPokemonItens(offset, limit)
 
