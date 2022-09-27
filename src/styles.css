@@ -109,7 +109,8 @@ header {
     padding: 1rem;
 } 
 
-.header__brand img {
+.header__brand .logo {
+    width: 100%;
     height: 4.5rem;
     padding: 0.5rem;
     pointer-events: none;
