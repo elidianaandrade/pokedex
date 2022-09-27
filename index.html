@@ -106,8 +106,8 @@
                 <div class="choose-pokemon__cover">
                     <img class="choose-pokemon__img" src="" alt="">
                     <div class="choose-pokemon__buttons">
-                      <button id="buttonPrev" class="button-circular bi bi-caret-left-fill"></button>  
-                      <button id="buttonNext" class="button-circular bi bi-caret-right-fill"></button>  
+                      <button id="buttonPrev" title="Prev" class="button-circular bi bi-caret-left-fill"></button>  
+                      <button id="buttonNext" title="Next" class="button-circular bi bi-caret-right-fill"></button>  
                     </div>
                 </div>
             </div>  
@@ -141,6 +141,7 @@
                         <li title="steel" class="type steel"></li>
                         <li title="dragon" class="type dragon"></li>
                         <li title="fairy" class="type fairy"></li>
+                        <li id="buttonViewAll" class="all">View all</li>
                     </ol>
                 </div>
             </div>
@@ -150,8 +151,8 @@
             <img src="src/assets/images/pokeball.png" alt="Pokeball">
             <span id="pokedexListLength"></span>
         </div>
-
-        <ol id="pokemonsList" class="pokemons-list"></ol>
+        
+        <ol id="pokemonList" class="pokemons-list"></ol>
         <div class="pagination">
             <button id="previousButton" type="button" class="button-horizontal">
                 <i class="button-circular bi bi-caret-left-fill"></i>  
