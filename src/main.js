@@ -1,24 +1,24 @@
 /* MENU ITEM */ 
-const menuItems = document.querySelectorAll('.menu__item');
+const menuItems = document.querySelectorAll('.menu__item')
 
 menuItems.forEach(item => {
   item.addEventListener("click", () => {   
     menuItems.forEach(a=>{
-      a.classList.remove("active");
-    });
-     item.classList.add("active");    
-  });  
-});
+      a.classList.remove("active")
+    })
+     item.classList.add("active") 
+  })
+})
 /* MENU ITEM END */ 
 
 /* BUTTON UP */
-const buttonUp = document.getElementById('buttonUp'); 
+const buttonUp = document.getElementById('buttonUp')
 
 function showButtonUp () {
   if (window.scrollY > 100) {
-    buttonUp.style.display = 'block';
+    buttonUp.style.display = 'block'
   }   else {
-    buttonUp.style.display = 'none';
+    buttonUp.style.display = 'none'
   }
 }
 
