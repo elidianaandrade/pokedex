@@ -19,6 +19,7 @@ Pokédex desenvolvida através do consumo da API REST [PokéApi](https://pokeapi
 ## ⚙ Funcionalidades
 - [x] Display com pesquisa de Pokémons;
 - [x] Listagem de Pokémons;
+- [x] Fitragem de Pokémons por Tipo;
 - [x] Modal com detalhes sobre os Pokémons;
 - [x] Listagem de Pokémons Favoritos.
 
