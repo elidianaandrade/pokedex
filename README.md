@@ -27,9 +27,3 @@ Pokédex desenvolvida com o consumo da API REST [PokéApi](https://pokeapi.co/),
 - [Repositório do Instrutor Renan J Paula](https://github.com/digitalinnovationone/js-developer-pokedex).
 - [Digital Innovation One](https://www.dio.me/).
 - [Manual do Dev](https://youtu.be/SjtdH3dWLa8).
-
-<div align="right">
-  <a href="#top">
-    <img alt="Up" height="25" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/angle-up.svg">
-  </a>
-</div>
